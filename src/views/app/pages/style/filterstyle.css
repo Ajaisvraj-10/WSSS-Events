@@ -212,17 +212,6 @@ font-weight: 600;
 line-height: normal;
 }
 
-.close_div{
-    display: flex;
-height: 38px;
-justify-content: center;
-align-items: center;
-gap: 5px;
-}
-
-svg.close_icon {
-    margin-right: -34px;
-}
 
 .slect_flter{
     display: flex;

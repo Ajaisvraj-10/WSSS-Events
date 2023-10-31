@@ -26,7 +26,7 @@ const routes = [
      
           {
             path: "",
-            component: () => import("./views/app/pages/home"),
+            component: () => import("./views/app/pages/loading"),
           },
          
           
@@ -70,6 +70,16 @@ const routes = [
             component: () => import("./views/app/pages/account"),
             name:'account'
           },
+          {
+            path: "failed",
+            component: () => import("./views/app/pages/failed"),
+            name:'failed'
+          },
+          // {
+          //   path: "loading",
+          //   component: () => import("./views/app/pages/loading"),
+          //   name:'loading'
+          // },
           
           {
             path: "sign-in",
