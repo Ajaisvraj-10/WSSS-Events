@@ -48,12 +48,17 @@
 
         <div class="all_box">
             <div class="txt_all">All</div>
-            <div><input type="radio"></div>
+            <div>
+                <input type="radio">
+            </div>
         </div>
         <!-- car-wash -->
         <div class="all_box">
             <div class="txt_all">Car wash</div>
-            <div><input type="radio"></div>
+            <div>
+                <input type="radio" id="radio1" name="radiogroup" class="custom-radio">
+<label for="radio1"></label>
+            </div>
         </div>
         <!-- hotels -->
         <div class="all_box">
@@ -207,7 +212,7 @@
         </div>
     </div>  
 
-    <div class="date_time_div">
+    <div class="date_time_div_log">
         <div class="date_div">
             <div class="head_date">Date</div>
             <div><input class="inpt_date" type="date"></div>
@@ -457,7 +462,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
   <path d="M3 15.8334H18V17.5H3V15.8334ZM11.3333 10.9764L16.3926 5.9171L17.5711 7.09562L10.5 14.1667L3.42893 7.09562L4.60744 5.9171L9.66667 10.9764V1.66669H11.3333V10.9764Z" fill="white"/>
 </svg> Download (72) Leads</button>
-<b-modal v-model="isSixthModalVisible" centered hide-footer  >
+<b-modal v-model="isSixthModalVisible" centered hide-footer  id="custom_popup">
     <div class="leads_main2"></div>
     <div class="success_popup">
         <img class="success_img" src="/lead_finder/success.png" alt=""><br>
@@ -549,7 +554,7 @@ openModal(content) {
   if (content === 'leadDetails') {
     this.modalTitle = 'Lead Details';
   } else if (content === 'addNote') {
-    this.modalTitle = 'Add Note';
+    this.modalTitle = 'Note';
   } else if (content === 'logActivity') {
     this.modalTitle = 'Log Activity';
   }

@@ -16,7 +16,6 @@ import "firebase/auth";
 import {firebaseSettings} from "@/data/config";
 import i18n from "./lang/lang";
 import DateRangePicker from 'vue2-daterange-picker'
-//you need to import the CSS manually (in case you want to override it)
 import 'vue2-daterange-picker/dist/vue2-daterange-picker.css'
 //import material-icon scss
 import "font-awesome/css/font-awesome.min.css";

@@ -50,7 +50,7 @@
           <div class="boxtxt">
             <span class="num_div">{{ currentBanner.content.num1 }}</span>
             <span class="txt_left">left</span><br>
-            <span class="txt_left">{{ currentBanner.content.text1 }}</span>
+            <span class="txt_left">{{ currentBanner.content.text1 }}</span> 
           </div>
         </div>
         <div class="box_ldfndr">
@@ -108,9 +108,9 @@
                 <b-modal v-model="isSecondModalVisible" centered hide-footer body-class="slide-up-enter">
                 <div class="edit_head">
                     <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z" fill="#171717"/>
-</svg>
+</svg> -->
                     </div>
                     <div class="modal_txt_edit">Edit Profile</div>
                 </div>
@@ -136,21 +136,21 @@
                     <!--  -->
                     <div class="edit_name_dtls">
                         <div class="name_field_div">
-                            <div>Melvin Designs</div>
+                           <input type="text" placeholder="Melvin Designs">
                             <div class="field_box">
                                 <div class="box_name">Enter Name</div>
                             </div>
                         </div>
                         <!-- 2 -->
                         <div class="name_field_div">
-                            <div>melvindesigns@hello.com</div>
+                            <input type="text" placeholder="melvindesigns@hello.com">
                             <div class="field_box2">
                                 <div class="box_name">Enter email</div>
                             </div>
                         </div>
                         <!-- 3 -->
                         <div class="name_field_div">
-                            <div>904484445654</div>
+                            <input type="text" placeholder="904484445654">
                             <div class="field_box3">
                                 <div class="box_name">Enter Phone</div>
                             </div>
@@ -168,10 +168,10 @@
                     <button class="cancel_btn">Cancel Plan</button>
                 </div>
                 <button @click="openThirdModal" class="delete_btn">Delete Account</button>
-                <b-modal  v-model="isThirdModalVisible" centered hide-footer body-class="slide-up-enter">
+                <b-modal  v-model="isThirdModalVisible" centered hide-footer body-class="slide-up-enter" id="custom_modal">
                     <div class="dialog_box">
                         <div class="warnings_dtls">
-                            <div>Are you sure you want to delete the account?</div>
+                            <div class="txt_warn">Are you sure you want to delete the account?</div>
                             <div class="brdr_line"></div>
                             <div>All your data will be completely deleted and you won’t <br> be able to recover it. </div>
                             <div class="btn_cancel_delete">
@@ -206,7 +206,10 @@
                   <div> <span>$9 USD</span> <span class="txt_prmnth">Per month</span> </div> 
                     <div  class="plan_limt">2500 leads limit</div>
                 </div>
-                <div><input type="radio"></div>
+                <div>
+                  <input type="radio" id="radio1" name="radiogroup" class="custom-radio">
+<label for="radio1"></label>
+                </div>
             </div>
             <!-- plan-growth -->
             <div class="plan_growth">
@@ -217,7 +220,11 @@
                 </div>
                 <div class="bst_vlue_btn">
                     <button class="btn_bstvlue">Best Value</button>
-                    <div><input type="radio"></div>
+                    <div>
+                      <input type="radio" id="radio2" name="radiogroup" class="custom-radio">
+<label for="radio2"></label>
+
+                    </div>
                 </div>
             </div>
             <!-- plan-premium -->
@@ -227,7 +234,10 @@
                     <div> <span>$99 USD</span><span class="txt_prmnth">Per year</span></div> 
                     <div class="plan_limt">Unlimited leads finder</div>
                 </div>
-                <div><input type="radio"></div>
+                <div>
+                  <input type="radio" id="radio3" name="radiogroup" class="custom-radio">
+<label for="radio3"></label>
+                </div>
             </div>
             <router-link :to="{ name: 'failed'}"> <button class="btn_plan_upgrade">Upgrade Now</button></router-link>
         </div>
@@ -301,7 +311,7 @@
         <div class="cmnt_box">Enter Comment</div>
     </div>
 
-    <button class="btn_create_tckt">Create Ticket</button>
+    <button class="btn_create_tckt">Create Tag</button>
     </b-modal>
         </div>
 
@@ -437,7 +447,7 @@ export default {
       document.getElementById("fileInput").click();
     },
     startAutoSlide() {
-      this.autoSlideInterval = setInterval(this.nextSlide, 5000); // Change slide every 5 seconds
+      this.autoSlideInterval = setInterval(this.nextSlide, 5000); 
     },
     nextSlide() {
         this.currentIndex = (this.currentIndex + 1) % this.banners.length;

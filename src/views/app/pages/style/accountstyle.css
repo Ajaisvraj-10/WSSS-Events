@@ -327,6 +327,7 @@ align-items: center;
 gap: 6px;
 border-radius: 24px;
 border: 1px solid var(--Text-Gray-Shade, #D9D9D9);
+background: #fff;
 
 color: var(--Text-Bold-Shade, #171717);
 text-align: center;
@@ -382,6 +383,30 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+/* custom-modal */
+#custom_modal .modal-content {
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 370px;
+    width: 100%;
+    margin-left: -9px;
+    position: fixed;
+    bottom: 0;
+    border-radius: var(--gp-16, 25px) var(--gp-16, 25px) 0px 0px;
+  }
+  #custom_modal.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 0 !important;
+}
+  
+/* end-of custom-modal */
 .cancel_btn{
     display: flex;
 padding: var(--gp-8, 8px) var(--gp-24, 24px);
@@ -410,6 +435,7 @@ align-items: center;
 gap: 5px;
 border-radius: 24px;
 border: 1px solid var(--Text-Gray-Shade, #D9D9D9);
+background: #fff;
 
 color: #FF3737;
 text-align: center;
@@ -427,8 +453,9 @@ width: 220px;
 align-items: center;
 gap: var(--gp-12, 12px);
 position: absolute;
-right: 135px;
-top: -17px;
+right: 130px;
+top: -10px;
+
 }
 
 .modal_txt_edit{
@@ -479,12 +506,16 @@ gap: var(--gp-16, 16px);
 .name_field_div{
     display: flex;
 width: 343px;
-padding: var(--pa-16, 16px) var(--pa-24, 24px);
+padding: var(--pa-16, 12px) var(--pa-24, 24px);
 align-items: center;
 gap: 5px;
 border-radius: var(--br-8, 8px);
 border: 1px solid #CCC;
 background: #FFF;
+}
+input{
+    border: hidden !important;
+    outline-style: none !important;
 }
 
 .field_box{
@@ -495,7 +526,7 @@ align-items: center;
 gap: 5px;
 position: absolute;
 left: 30px;
-top: 90px;
+top: 120px;
 background: var(--Text-White, #FFF);
 }
 .field_box2{
@@ -506,7 +537,7 @@ align-items: center;
 gap: 5px;
 position: absolute;
 left: 30px;
-top: 188px;
+top: 180px;
 background: var(--Text-White, #FFF);
 }
 .field_box3{
@@ -517,7 +548,7 @@ align-items: center;
 gap: 5px;
 position: absolute;
 left: 30px;
-top: 260px;
+top: 245px;
 background: var(--Text-White, #FFF);
 }
 .box_name{
@@ -568,6 +599,20 @@ flex-direction: column;
 align-items: flex-start;
 gap: var(--gp-6, 6px);
 align-self: stretch;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.txt_warn{
+    color: var(--Text-Bold-Shade, #171717);
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+position: relative;
+left: -5px;
 }
 
 .brdr_line{
@@ -581,6 +626,10 @@ background: var(--Text-Gray-Shade, #D9D9D9);
 align-items: flex-start;
 gap: var(--gp-8, 8px);
 align-self: stretch;
+margin-right: auto;
+margin-left: auto;
+margin-top: 30px;
+width: 95%;
 }
 
 .btn_cncl{
@@ -644,10 +693,55 @@ align-items: flex-start;
 gap: var(--pa-16, 16px);
 align-self: stretch;
 margin-top: 40px;
-width: 345px;
+width: 335px;
 margin-left: auto;
 margin-right: auto;
 }
+/* custom-radio-btn */
+.custom-radio {
+    display: none;
+  }
+  
+  .custom-radio + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px; 
+    border: 1px solid grey;
+    border-radius: 50%; 
+    cursor: pointer;
+  }
+  
+  .custom-radio:checked + label {
+    background-color: green; 
+    border: 2px solid green; 
+  }
+  /* tick-marl */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label::before {
+    content: "✔"; 
+    display: inline-block;
+    width: 17px; 
+    height: 17px; 
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 17px; 
+    margin-right: 5px; 
+  }
+  
+  input[type="radio"].custom-radio + label::before {
+    background-color: white; 
+    color: transparent; 
+  }
+  
+  input[type="radio"].custom-radio:checked + label::before {
+    background-color: green; 
+    color: white; 
+  }
+  /* end-tick-mark */
+/* end -f custom-radio-btn */
 
 .plan_starter{
     display: flex;
@@ -778,8 +872,8 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 position: absolute;
-top: -15px;
-left: 15px;
+top: -10px;
+left: 20px;
 }
 
 .create_tcket_div{
@@ -790,7 +884,7 @@ gap: var(--br-8, 8px);
 border-top: 1px solid var(--Text-Gray-Shade, #D9D9D9);
 border-bottom: 1px solid var(--Text-Gray-Shade, #D9D9D9);
 background: var(--Text-White, #FFF);
-margin-top: 20px;
+margin-top: 25px;
 width: 100%;
 }
 
@@ -803,7 +897,7 @@ gap: var(--gp-4, 4px);
 
 .your_tckt_div{
     display: flex;
-    padding: 0px var(--gp-24, 10px);
+    padding: 0px var(--gp-24, 15px);
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
@@ -820,6 +914,7 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 margin-top: 10px;
+margin-left: 10px;
 }
 
 .tckt_box{
@@ -888,6 +983,11 @@ align-items: flex-start;
 gap: var(--gp-12, 12px);
 align-self: stretch;
 border-top: 1px solid var(--Text-Gray-Shade, #D9D9D9);
+width: 100%;
+position: absolute;
+top: 90%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 .btn_email_spprt{
@@ -920,12 +1020,12 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 position: absolute;
-top: -17px;
-}
+top: -5px;
+left: 15px;}
 
 .slct_bill_div{
     display: flex;
-width: 309px;
+    width: 335px;
 padding: var(--pa-12, 12px) var(--pa-24, 24px);
 justify-content: space-between;
 align-items: flex-start;
@@ -933,6 +1033,8 @@ border-radius: var(--br-8, 8px);
 border: 1px solid #CCC;
 background: var(--Text-White, #FFF);
 margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
 }
 select{
     border: none !important;
@@ -947,8 +1049,8 @@ align-items: center;
 gap: 5px;
 background: var(--Text-White, #FFF);
 position: absolute;
-left: 30px;
-top: 50px;
+left: 40px;
+top: 35px;
 
 color: var(--Secondary-color, #00BD84);
 text-align: center;
@@ -970,6 +1072,9 @@ border-radius: var(--br-12, 12px);
 border: 1px solid #CCC;
 background: var(--Text-White, #FFF);
 margin-top: 35px;
+width: 340px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .cmnt_box{
@@ -981,8 +1086,7 @@ gap: 5px;
 background: var(--Text-White, #FFF);
 position: absolute;
 left: 30px;
-top: 130px;
-
+top: 120px;
 color: var(--Secondary-color, #00BD84);
 text-align: center;
 font-family: Roboto;
@@ -1014,7 +1118,7 @@ line-height: 24px;
 margin-left: auto;
 margin-right: auto;
 margin-top: 50px;
-width: 100%;
+width: 90%;
 }
 
 .txt_version{
@@ -1038,12 +1142,14 @@ width: 100%;
 .box_ldfndr{
     width: 140px;
     height: 80px;
-    background: #5e8b5e;
+    background: #2e8b5791;
     border-radius: 10px;
+    
 }
 .boxtxt{
     margin-top: 10px;
     margin-left: 5px;
+    padding: 10px;
 }
 .num_div{
     color: #fff;
