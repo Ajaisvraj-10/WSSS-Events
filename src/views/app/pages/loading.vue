@@ -24,13 +24,13 @@
         </div>   
     </div>
      <!-- loading-data -->
- <div class="main_skelt_bdy">
-    <div class="frame_1">
+ <div class="main_skelt_bdy" >
+    <div class="frame_1 skeleton">
         <div class="rect1"></div>
     </div>
-    <div class="frame2">
-        <div class="inner_boxes">
-            <div class="slct_div1">
+    <div class="frame2 skeleton">
+        <div class="inner_boxes skeleton">
+            <div class="slct_div1 skeleton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
 <rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
 <rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
@@ -65,7 +65,7 @@
             
             </div>
             <!-- 2 -->
-            <div class="slct_div1">
+            <div class="slct_div1 skeleton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
 <rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
 <rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
@@ -100,7 +100,7 @@
             
             </div>
             <!-- 3 -->
-            <div class="slct_div1">
+            <div class="slct_div1 skeleton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
 <rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
 <rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
@@ -135,7 +135,7 @@
             
             </div>
             <!-- 4 -->
-            <div class="slct_div1">
+            <div class="slct_div1 skeleton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
 <rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
 <rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
@@ -170,7 +170,7 @@
             
             </div>
             <!-- 5 -->
-            <div class="slct_div1">
+            <div class="slct_div1 skeleton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
 <rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
 <rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
@@ -205,7 +205,7 @@
             
             </div>
             <!-- 6 -->
-            <div class="slct_div1">
+            <div class="slct_div1 skeleton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
 <rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
 <rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
@@ -240,6 +240,142 @@
             
             </div>
             <!-- 7 -->
+            <div class="slct_div1 skeleton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+            <!-- 8 -->
+            <div class="slct_div1 skeleton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+            <!-- 9 -->
+            <div class="slct_div1 skeleton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+            <!-- 10 -->
+            <div class="slct_div1 skeleton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+            <!-- 11 -->
             <div class="slct_div1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
 <rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
@@ -273,9 +409,180 @@
 <div class="div_1_rect"></div>
             </div>
             </div>
+            <!-- 12 -->
+            <div class="slct_div1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+            <!-- 13 -->
+            <div class="slct_div1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+            <!-- 14 -->
+            <div class="slct_div1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+             <!-- 15 -->
+             <div class="slct_div1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+            <!-- 16 -->
+            <div class="slct_div1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" fill="none">
+<rect width="55" height="12.25" rx="6.125" fill="url(#paint0_linear_364_8)"/>
+<rect y="25" width="120" height="14" rx="7" fill="url(#paint1_linear_364_8)"/>
+<defs>
+<linearGradient id="paint0_linear_364_8" x1="55" y1="6.23245" x2="4.24337e-07" y2="6.23246" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_8" x1="120" y1="32.1228" x2="9.25827e-07" y2="32.1228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="slct_div1_2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="26" viewBox="0 0 49 26" fill="none">
+<rect x="12" width="15" height="10.5" rx="5.25" fill="url(#paint0_linear_364_12)"/>
+<rect x="12" y="15" width="19" height="10.5" rx="5.25" fill="url(#paint1_linear_364_12)"/>
+<defs>
+<linearGradient id="paint0_linear_364_12" x1="27" y1="5.3421" x2="12" y2="5.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+<linearGradient id="paint1_linear_364_12" x1="31" y1="20.3421" x2="12" y2="20.3421" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDBDB" stop-opacity="0.05"/>
+<stop offset="0.5" stop-color="#DBDBDB"/>
+</linearGradient>
+</defs>
+</svg>
+<div class="div_1_rect"></div>
+            </div>
+            </div>
+
         </div>
     </div>
-    <div class="show_more_sklt">
+    <div class="show_more_sklt skeleton">
         <div class="frame3">
             <div class="frme3_rect"></div>
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="24" viewBox="0 0 100 24" fill="none">
@@ -308,7 +615,7 @@
 </svg>
         </div>
         <div class="txt_crm">CRM</div>
-        <div></div>
+        <div class="white_box"></div>
     </div>
 
     <div class="search_fltr_sect">
@@ -323,11 +630,19 @@
   <path d="M18 26H22V24H18V26ZM11 14V16H29V14H11ZM14 21H26V19H14V21Z" fill="black"/>
 </svg>
         </div>   
-        <b-modal v-model="isFifthModalVisible" centered hide-footer>
+        <b-modal v-model="isFifthModalVisible" centered hide-footer hide-header id="fltr_modal">
+            <header class="header_popup">
+                <div class="top_bar"></div>
+                <div class="pop_head">
+                    <div class="txt_filter_fltr">Filter</div>   
+                    <button @click="$bvModal.hide('fltr_modal')" class="close_button">x</button>
+                </div>
+            </header>
+           
             <div class="inner_fltr_box">
-        <div class="fltr_header">
-            <div class="txt_filter_fltr">Filter</div>
-        </div>
+        <!-- <div class="fltr_header">
+            
+        </div> -->
         <div class="top_line"></div>
         <!--  -->
         <div class="slect_flter">
@@ -348,7 +663,7 @@
         <div class="all_box">
             <div class="txt_all">All</div>
             <div>
-              <input type="radio" id="radio1" name="radiogroup" class="custom-radio">
+                <input type="radio" id="radio1" class="custom-radio" name="radio-group">
 <label for="radio1"></label>
             </div>
         </div>
@@ -356,7 +671,7 @@
         <div class="all_box">
             <div class="txt_all">Car wash</div>
             <div>
-              <input type="radio" id="radio2" name="radiogroup" class="custom-radio">
+                <input type="radio" id="radio2" class="custom-radio" name="radio-group">
 <label for="radio2"></label>
             </div>
         </div>
@@ -364,7 +679,7 @@
         <div class="all_box">
             <div class="txt_all">Hotels</div>
             <div>
-              <input type="radio" id="radio3" name="radiogroup" class="custom-radio">
+                <input type="radio" id="radio3" class="custom-radio" name="radio-group">
 <label for="radio3"></label>
             </div>
         </div>
@@ -372,7 +687,7 @@
         <div class="all_box">
             <div class="txt_all">Realestate</div>
             <div>
-              <input type="radio" id="radio4" name="radiogroup" class="custom-radio">
+                <input type="radio" id="radio4" class="custom-radio" name="radio-group">
 <label for="radio4"></label>
             </div>
         </div>
@@ -402,8 +717,15 @@
         </div>
     </div>
 
-    <b-modal v-model="isFirstModalVisible" centered hide-footer>
-        <div class="txt_filter_logactivity">{{ modalTitle }}</div>
+    <b-modal v-model="isFirstModalVisible" centered hide-footer hide-header id="leads_modal">
+        <header class="header_popup">
+            <div class="top_bar"></div>
+            <div class="pop_head">
+                <div class="txt_filter_logactivity">{{ modalTitle }}</div>
+                    <button @click="$bvModal.hide('leads_modal')" class="close_button">x</button>
+                </div>
+        </header>
+        
         <div class="inner_fltr_box">
             <div class="top_line_leads"></div>
 
@@ -693,11 +1015,19 @@
       <button @click="openSecondModal" class="btn_dwlnd">
         <img src="/lead_finder/download-line.png" alt=""> Download Leads
       </button>
-      <b-modal v-model="isSecondModalVisible" centered hide-footer  >
+      <b-modal v-model="isSecondModalVisible" centered hide-footer hide-header id="dwnld_modal">
+        <header class="header_popup">
+            <div class="top_bar"></div> 
+            <div class="pop_head">
+                <div class="txt_filter_dwnld">Download Leads</div>
+                    <button @click="$bvModal.hide('dwnld_modal')" class="close_button">x</button>
+                </div>
+        </header>
+       
     <div class="inner_fltr_box">
-        <div class="fltr_header">
-            <div class="txt_filter_dwnld">Download Leads</div>
-        </div>
+        <!-- <div class="fltr_header">
+            
+        </div> -->
         <div class="top_line"></div>
         <div class="categry_status_box">
             <div class="categrybox_statusbox">
@@ -818,7 +1148,7 @@ BModal,
   mounted() {
         setTimeout(() => {
           this.is_load = false;
-        }, 3000);
+        }, 5000);
       },
   methods: {
 openFirstModal() {

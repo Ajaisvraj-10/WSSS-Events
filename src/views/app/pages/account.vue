@@ -93,8 +93,14 @@
         </div>
     </div>
 
-    <b-modal v-model="isFirstModalVisible" centered hide-footer body-class="slide-up-enter">
-        <div class="modal_txt_accnt">Account</div>
+    <b-modal v-model="isFirstModalVisible" centered hide-footer hide-header id="accnt_modal">
+      <header class="header_popup">
+        <div class="top_bar"></div>
+        <div class="pop_head">
+          <div class="modal_txt_accnt">Account</div>
+                    <button @click="$bvModal.hide('accnt_modal')" class="close_button">x</button>
+                </div>
+      </header>
         <div class="top_line_profile"></div>
         <div class="profile_details">
             <img src="/lead_finder/accnt_profile.png" alt="">
@@ -105,22 +111,26 @@
                     <div>+91454656565</div>
                 </div>
                 <button @click="openSecondModal" class="btn_edit">Edit Profile</button>
-                <b-modal v-model="isSecondModalVisible" centered hide-footer body-class="slide-up-enter">
+                <b-modal v-model="isSecondModalVisible" centered hide-footer hide-header id="edit_modal">
+                  <header>
+                    <div class="top_bar"></div>
+                    <div class="pop_head">
+                      <div class="modal_txt_edit">Edit Profile</div>
+                    <button @click="$bvModal.hide('edit_modal')" class="close_button">x</button>
+                </div>
+                  </header>
+                  
                 <div class="edit_head">
-                    <div>
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z" fill="#171717"/>
-</svg> -->
-                    </div>
-                    <div class="modal_txt_edit">Edit Profile</div>
+                    
                 </div>
                 <div class="top_line_edit"></div>
                 <!-- edit-details -->
                 <div class="edit_dtls_div">
                     <div class="prof_pic_div">
                         <img class="edit_img" src="/lead_finder/accnt_profile.png" alt="">
-                        <label for="fileInput">
-                        <div class="add_btn_grp">
+                        <!-- <label for="fileInput" id="inpt_file">
+                    </label> -->
+                    <div class="add_btn_grp">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
   <circle cx="14.5" cy="14" r="14" fill="#00BD84"/>
@@ -130,7 +140,6 @@
   <path d="M12.4494 11.95V5.65002H14.5494V11.95H20.8494V14.05H14.5494V20.35H12.4494V14.05H6.14941V11.95H12.4494Z" fill="white"/>
 </svg></div>
                         </div>
-                    </label>
                     <input type="file" id="fileInput" webkitdirectory directory multiple style="display: none;">
                     </div>
                     <!--  -->
@@ -196,8 +205,14 @@
             <div class="txt_bar_accnt2">Upgrade your current  free plan</div>
         </div>
     </div>
-    <b-modal  v-model="isFourthModalVisible" centered hide-footer body-class="slide-up-enter">
-        <div class="plan_head">Pick Your Plan</div>
+    <b-modal  v-model="isFourthModalVisible" centered hide-footer hide-header id="plan_modal">
+      <header>
+        <div class="top_bar"></div>
+        <div class="pop_head">
+          <div class="plan_head">Pick Your Plan</div>
+      <button @click="$bvModal.hide('plan_modal')" class="close_button">x</button>
+      </div>
+      </header>
         <div class="top_line_plan"></div>
         <div class="plan_main_div">
             <div class="plan_starter">
@@ -207,7 +222,7 @@
                     <div  class="plan_limt">2500 leads limit</div>
                 </div>
                 <div>
-                  <input type="radio" id="radio1" name="radiogroup" class="custom-radio">
+                  <input type="radio" id="radio1" class="custom-radio" name="radio-group">
 <label for="radio1"></label>
                 </div>
             </div>
@@ -215,13 +230,13 @@
             <div class="plan_growth">
                 <div class="growth_dtls">
                     <div class="txt_strter">Growth</div>
-                    <div> <span>$59 USD</span><span class="txt_prmnth">Per year</span></div> 
+                    <div> <span>$59 USD </span><span class="txt_prmnth">Per year</span></div> 
                     <div  class="plan_limt">10000 leads limit</div>
                 </div>
                 <div class="bst_vlue_btn">
                     <button class="btn_bstvlue">Best Value</button>
                     <div>
-                      <input type="radio" id="radio2" name="radiogroup" class="custom-radio">
+                      <input type="radio" id="radio2" class="custom-radio" name="radio-group">
 <label for="radio2"></label>
 
                     </div>
@@ -231,11 +246,11 @@
             <div class="plan_starter">
                 <div class="starter_dtls">
                     <div class="txt_strter">Premium</div>
-                    <div> <span>$99 USD</span><span class="txt_prmnth">Per year</span></div> 
+                    <div> <span>$99 USD </span><span class="txt_prmnth">Per year</span></div> 
                     <div class="plan_limt">Unlimited leads finder</div>
                 </div>
                 <div>
-                  <input type="radio" id="radio3" name="radiogroup" class="custom-radio">
+                  <input type="radio" id="radio3" class="custom-radio" name="radio-group">
 <label for="radio3"></label>
                 </div>
             </div>
@@ -288,8 +303,14 @@
             <div class="txt_bar_accnt2">Create tickets and inquiries</div>
         </div>
     </div>
-    <b-modal v-model="isFifthModalVisible" centered hide-footer body-class="slide-up-enter">
-        <div class="txt_spprt_tckt">Support & Tickets</div>
+    <b-modal v-model="isFifthModalVisible" centered hide-footer hide-header id="ticket_modal">
+      <header>
+        <div class="top_bar_tckt"></div>
+        <div class="pop_head">
+          <div class="txt_spprt_tckt">Support & Tickets</div>
+      <button @click="$bvModal.hide('ticket_modal')" class="close_button">x</button>
+      </div>
+      </header>
         <div class="create_tcket_div">
             <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 11H7V13H11V17H13V13H17V11H13V7H11V11Z" fill="#555555"/>
@@ -298,8 +319,13 @@
         <div class="txt_tckt">Create Ticket</div>
         <div>Create tickets to resolve any issues</div>
     </div>
-    <b-modal v-model="isSixthModalVisible" centered hide-footer body-class="slide-up-enter">
-    <div class="crete_tckt_txt">Create Ticket</div>
+    <b-modal v-model="isSixthModalVisible" centered hide-footer hide-header id="ticket2_modal">
+      <header>
+        <div class="pop_head">
+          <div class="crete_tckt_txt">Create Ticket</div>
+      <button @click="$bvModal.hide('ticket2_modal')" class="close_button">x</button>
+      </div>
+      </header>
     <div class="slct_bill_div">
         <div>Billing</div>
         <div><select name="" id=""></select></div>
@@ -371,7 +397,7 @@
             <div class="txt_bar_accnt">Sign out</div>
         </div>
     </div>
-    <div class="txt_version">Version v1.0.5</div>
+    <div class="txt_version">Version v1.0.6</div>
 </div>
 </template>
 

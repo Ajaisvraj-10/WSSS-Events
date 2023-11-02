@@ -9,7 +9,7 @@
 </svg>
         </div>
         <div class="txt_crm">CRM</div>
-        <div></div>
+        <div class="white_box"></div>
     </div>
 
     <div class="search_fltr_sect">
@@ -24,11 +24,19 @@
   <path d="M18 26H22V24H18V26ZM11 14V16H29V14H11ZM14 21H26V19H14V21Z" fill="black"/>
 </svg>
         </div>   
-        <b-modal v-model="isFifthModalVisible" centered hide-footer>
+        <b-modal v-model="isFifthModalVisible" centered hide-footer hide-header id="fltr_modal">
+            <header class="header_popup">
+                <div class="top_bar"></div>
+                <div class="pop_head">
+                    <div class="txt_filter_fltr">Filter</div>   
+                    <button @click="$bvModal.hide('fltr_modal')" class="close_button">x</button>
+                </div>
+            </header>
+           
             <div class="inner_fltr_box">
-        <div class="fltr_header">
-            <div class="txt_filter_fltr">Filter</div>
-        </div>
+        <!-- <div class="fltr_header">
+            
+        </div> -->
         <div class="top_line"></div>
         <!--  -->
         <div class="slect_flter">
@@ -49,26 +57,33 @@
         <div class="all_box">
             <div class="txt_all">All</div>
             <div>
-                <input type="radio">
+                <input type="radio" id="radio1" class="custom-radio" name="radio-group">
+<label for="radio1"></label>
             </div>
         </div>
         <!-- car-wash -->
         <div class="all_box">
             <div class="txt_all">Car wash</div>
             <div>
-                <input type="radio" id="radio1" name="radiogroup" class="custom-radio">
-<label for="radio1"></label>
+                <input type="radio" id="radio2" class="custom-radio" name="radio-group">
+<label for="radio2"></label>
             </div>
         </div>
         <!-- hotels -->
         <div class="all_box">
             <div class="txt_all">Hotels</div>
-            <div><input type="radio"></div>
+            <div>
+                <input type="radio" id="radio3" class="custom-radio" name="radio-group">
+<label for="radio3"></label>
+            </div>
         </div>
         <!-- real-estate -->
         <div class="all_box">
             <div class="txt_all">Realestate</div>
-            <div><input type="radio"></div>
+            <div>
+                <input type="radio" id="radio4" class="custom-radio" name="radio-group">
+<label for="radio4"></label>
+            </div>
         </div>
         <!-- update-btn -->
         <button class="update_btn_fltr">Update filter</button>
@@ -96,8 +111,15 @@
         </div>
     </div>
 
-    <b-modal v-model="isFirstModalVisible" centered hide-footer>
-        <div class="txt_filter_logactivity">{{ modalTitle }}</div>
+    <b-modal v-model="isFirstModalVisible" centered hide-footer hide-header id="leads_modal">
+        <header class="header_popup">
+            <div class="top_bar"></div>
+            <div class="pop_head">
+                <div class="txt_filter_logactivity">{{ modalTitle }}</div>
+                    <button @click="$bvModal.hide('leads_modal')" class="close_button">x</button>
+                </div>
+        </header>
+        
         <div class="inner_fltr_box">
             <div class="top_line_leads"></div>
 
@@ -212,7 +234,7 @@
         </div>
     </div>  
 
-    <div class="date_time_div_log">
+    <div class="date_time_div">
         <div class="date_div">
             <div class="head_date">Date</div>
             <div><input class="inpt_date" type="date"></div>
@@ -387,11 +409,19 @@
       <button @click="openSecondModal" class="btn_dwlnd">
         <img src="/lead_finder/download-line.png" alt=""> Download Leads
       </button>
-      <b-modal v-model="isSecondModalVisible" centered hide-footer  >
+      <b-modal v-model="isSecondModalVisible" centered hide-footer hide-header id="dwnld_modal">
+        <header class="header_popup">
+            <div class="top_bar"></div> 
+            <div class="pop_head">
+                <div class="txt_filter_dwnld">Download Leads</div>
+                    <button @click="$bvModal.hide('dwnld_modal')" class="close_button">x</button>
+                </div>
+        </header>
+       
     <div class="inner_fltr_box">
-        <div class="fltr_header">
-            <div class="txt_filter_dwnld">Download Leads</div>
-        </div>
+        <!-- <div class="fltr_header">
+            
+        </div> -->
         <div class="top_line"></div>
         <div class="categry_status_box">
             <div class="categrybox_statusbox">
@@ -462,7 +492,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
   <path d="M3 15.8334H18V17.5H3V15.8334ZM11.3333 10.9764L16.3926 5.9171L17.5711 7.09562L10.5 14.1667L3.42893 7.09562L4.60744 5.9171L9.66667 10.9764V1.66669H11.3333V10.9764Z" fill="white"/>
 </svg> Download (72) Leads</button>
-<b-modal v-model="isSixthModalVisible" centered hide-footer  id="custom_popup">
+<b-modal v-model="isSixthModalVisible" centered hide-footer   id="custom_popup">
     <div class="leads_main2"></div>
     <div class="success_popup">
         <img class="success_img" src="/lead_finder/success.png" alt=""><br>
