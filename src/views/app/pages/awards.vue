@@ -11,11 +11,11 @@
         </div>
         <!-- nav -->
         <!-- mob_nav -->
-        <div class="mob_nav_menu">
+        <router-link :to="{ name: 'sidebar'}"> <div class="mob_nav_menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 28 28" fill="none">
   <path d="M3.5 4.66669H24.5V7.00002H3.5V4.66669ZM3.5 12.8334H24.5V15.1667H3.5V12.8334ZM3.5 21H24.5V23.3334H3.5V21Z" fill="#FEFAE0"/>
 </svg>
-        </div>
+        </div></router-link>
         <!-- end of mob_menu -->
         <div class="top_nav_bar">
             <div class="nav_menu_div">

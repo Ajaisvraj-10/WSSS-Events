@@ -46,6 +46,18 @@ const routes = [
             component: () => import("./views/app/pages/project"),
             name:'project'
           },
+
+          {
+            path: "empty",
+            component: () => import("./views/app/pages/empty"),
+            name:'empty'
+          },
+
+          {
+            path: "sidebar",
+            component: () => import("./views/app/pages/sidebar"),
+            name:'sidebar'
+          },
          
         ]
       },
