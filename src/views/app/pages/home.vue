@@ -1,601 +1,527 @@
 
 <template>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  <div class="crm_main">
-    <div class="header_part">
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-  <path d="M14.4382 16.0009L21.0379 22.6005L19.1523 24.4861L10.667 16.0009L19.1523 7.51562L21.0379 9.40124L14.4382 16.0009Z" fill="#171717"/>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <div class="contact_main">
+        <img class="gif_image" src="/wss_img/wsss_gif.gif" alt="gif">
+        <img class="gif_image_mob" src="/wss_img/mob_img.png" alt="">
+        <div class="main_rect"></div>
+        <div class="top_logo_box">
+            <div class="inner_logo">
+                <img class="logo_img" src="/wss_img/Logo-dark.png" alt="">
+                <!-- <div class="green_rect"></div> -->
+            </div>
+        </div>
+        <!-- nav -->
+        <!-- mob_nav -->
+        <div class="mob_nav_menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 28 28" fill="none">
+  <path d="M3.5 4.66669H24.5V7.00002H3.5V4.66669ZM3.5 12.8334H24.5V15.1667H3.5V12.8334ZM3.5 21H24.5V23.3334H3.5V21Z" fill="#FEFAE0"/>
 </svg>
         </div>
-        <div class="txt_crm">CRM</div>
-        <div class="white_box"></div>
-    </div>
+        <!-- end of mob_menu -->
+        <div class="top_nav_bar">
+            <div class="nav_menu_div">
+                <div class="nav_home"
+                v-for="(name, index) in menuItems"
+                :key="index"
+                @mouseover="hoveredItem = index"
+                @mouseout="hoveredItem = null"
+                >{{ name }}
+                <div class="underline" :class="{ active: hoveredItem === index }"></div>
+            </div>
+            </div>
+            <button class="btn_donate">Donate</button>
+        </div>
+        <!--  -->
+        <!-- banner_txts -->
+        <div class="banner_txt_div">
+            <div class="txt_1">WSSS is forming 200 joint <br> lability groups (JLGS)</div>
+            <div  class="txt_2">Wayanad Social Service Society (WSSS) is a registered charitable society Registered under Charitable Societies <br> Registration Act of 1860 and a secular voluntary organization established in the year 1974. It is the official social <br> work organization of the Catholic Diocese of Mananthavady.</div>
 
-    <div class="search_fltr_sect">
-        <div class="inpt_box_main">
-            <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M15.0262 13.8474L18.5951 17.4163L17.4166 18.5948L13.8477 15.0259C12.5644 16.0525 10.937 16.6667 9.16699 16.6667C5.02699 16.6667 1.66699 13.3067 1.66699 9.16669C1.66699 5.02669 5.02699 1.66669 9.16699 1.66669C13.307 1.66669 16.667 5.02669 16.667 9.16669C16.667 10.9367 16.0528 12.5641 15.0262 13.8474ZM13.3542 13.229C14.3732 12.1789 15.0003 10.7464 15.0003 9.16669C15.0003 5.94377 12.3899 3.33335 9.16699 3.33335C5.94408 3.33335 3.33366 5.94377 3.33366 9.16669C3.33366 12.3896 5.94408 15 9.16699 15C10.7467 15 12.1792 14.3729 13.2293 13.3539L13.3542 13.229Z" fill="#171717"/>
-</svg><input class="inpt_box" type="text" placeholder="Search leads">
-        </div>
-        
-        <div @click="openFifthModal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-  <path d="M18 26H22V24H18V26ZM11 14V16H29V14H11ZM14 21H26V19H14V21Z" fill="black"/>
-</svg>
-        </div>   
-        <b-modal v-model="isFifthModalVisible" centered hide-footer hide-header id="fltr_modal">
-            <header class="header_popup">
-                <div class="top_bar"></div>
-                <div class="pop_head">
-                    <div class="txt_filter_fltr">Filter</div>   
-                    <button @click="$bvModal.hide('fltr_modal')" class="close_button">x</button>
+            <div class="mute_knwmre_div">
+                <div class="mute_div">
+                    <img src="/wss_img/Mute x3.png" alt="">
                 </div>
-            </header>
-           
-            <div class="inner_fltr_box">
-        <!-- <div class="fltr_header">
+                <button class="know_more_btn">Know more</button>
+            </div>
+        </div>
+        <!--  -->
+        <!-- breking-stories -->
+        <div class="story_box_div">
+            <div class="story_boxes" :class="{ 'hide-scrollbar': hideScrollbar }">
+            <div class="story_box1">
+                <div><img class="story1_img" src="/wss_img/story1.png" alt=""></div>
+                <div class="story_dtls">
+                    <div class="story_txt1_div">
+                        <div class="story_txt1">ASHAKIRANAM DRESS BANK – A <br> PHILANTHROPIC MOVEMENT</div>
+                        <div class="posted_dtls">
+                            <button class="btn_latest">Latest</button>
+                            <div class="date_div">02/03/2023</div>
+                            <div>
+                                <svg style="margin-left: 75px;" xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 46 47" fill="none">
+  <path d="M25.3664 10.0539C25.2996 10.1207 25.2466 10.2 25.2104 10.2872C25.1742 10.3745 25.1556 10.468 25.1556 10.5625C25.1556 10.6569 25.1742 10.7505 25.2104 10.8377C25.2466 10.925 25.2996 11.0042 25.3664 11.071L37.0766 22.7812H7.18742C6.9968 22.7812 6.81398 22.8569 6.67919 22.9917C6.5444 23.1265 6.46867 23.3093 6.46867 23.5C6.46867 23.6906 6.5444 23.8734 6.67919 24.0082C6.81398 24.143 6.9968 24.2187 7.18742 24.2187H37.0766L25.3664 35.929C25.2996 35.9957 25.2467 36.075 25.2105 36.1623C25.1744 36.2495 25.1558 36.343 25.1558 36.4375C25.1558 36.5319 25.1744 36.6254 25.2105 36.7127C25.2467 36.7999 25.2996 36.8792 25.3664 36.946C25.4332 37.0128 25.5125 37.0657 25.5997 37.1019C25.687 37.138 25.7805 37.1566 25.8749 37.1566C25.9694 37.1566 26.0629 37.138 26.1501 37.1019C26.2374 37.0657 26.3167 37.0128 26.3834 36.946L39.3209 24.0085C39.3878 23.9417 39.4408 23.8625 39.4769 23.7752C39.5131 23.688 39.5317 23.5944 39.5317 23.5C39.5317 23.4055 39.5131 23.312 39.4769 23.2247C39.4408 23.1375 39.3878 23.0582 39.3209 22.9915L26.3834 10.0539C26.3167 9.98712 26.2374 9.93411 26.1502 9.89794C26.0629 9.86177 25.9694 9.84315 25.8749 9.84315C25.7805 9.84315 25.6869 9.86177 25.5997 9.89794C25.5124 9.93411 25.4332 9.98712 25.3664 10.0539Z" fill="#283618"/>
+</svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
             
-        </div> -->
-        <div class="top_line"></div>
-        <!--  -->
-        <div class="slect_flter">
-    <div @click="toggleActive('category')" :class="{ active: activeElement === 'category' }" class="box_categry">
-      <div class="txt_category">Category</div>
-    </div>
-    <!-- status -->
-    <div @click="toggleActive('status')" :class="{ active: activeElement === 'status' }" class="box_status">
-      <div class="txt_status">Status</div>
-    </div>
-    <!-- tags -->
-    <div @click="toggleActive('tags')" :class="{ active: activeElement === 'tags' }" class="box_tags">
-      <div class="txt_status">Tags</div>
-    </div>
-  </div>
-        <!--  -->
-
-        <div class="all_box">
-            <div class="txt_all">All</div>
-            <div>
-                <input type="radio" id="radio1" class="custom-radio" name="radio-group">
-<label for="radio1"></label>
-            </div>
-        </div>
-        <!-- car-wash -->
-        <div class="all_box">
-            <div class="txt_all">Car wash</div>
-            <div>
-                <input type="radio" id="radio2" class="custom-radio" name="radio-group">
-<label for="radio2"></label>
-            </div>
-        </div>
-        <!-- hotels -->
-        <div class="all_box">
-            <div class="txt_all">Hotels</div>
-            <div>
-                <input type="radio" id="radio3" class="custom-radio" name="radio-group">
-<label for="radio3"></label>
-            </div>
-        </div>
-        <!-- real-estate -->
-        <div class="all_box">
-            <div class="txt_all">Realestate</div>
-            <div>
-                <input type="radio" id="radio4" class="custom-radio" name="radio-group">
-<label for="radio4"></label>
-            </div>
-        </div>
-        <!-- update-btn -->
-        <button class="update_btn_fltr">Update filter</button>
-    </div>
-        </b-modal>
-
-    </div>
-    <!--  -->
-    <div class="day_dtls_sect">
-        <div class="txt_month_day">Wednesday, Oct 04</div>
-        <div class="today_box">
-            <div class="txt_tdy">Today</div>
-        </div>
-    </div>
-    <!--  -->
-   
-    <div @click="openModal('leadDetails')" class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Car wash</div>
-            <div class="sub_txt">Octopus Car Spa</div>
-        </div>
-        <div class="sect_two">  
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-
-    <b-modal v-model="isFirstModalVisible" centered hide-footer hide-header id="leads_modal">
-        <header class="header_popup">
-            <div class="top_bar"></div>
-            <div class="pop_head">
-                <div class="txt_filter_logactivity">{{ modalTitle }}</div>
-                    <button @click="$bvModal.hide('leads_modal')" class="close_button">x</button>
+            <div class="story_box1">
+                <div><img class="story1_img" src="/wss_img/story2.png" alt=""></div>
+                <div class="story_dtls">
+                    <div class="story_txt1_div">
+                        <div class="story_txt1">ASHAKIRANAM DRESS BANK – A <br> PHILANTHROPIC MOVEMENT</div>
+                        <div class="posted_dtls">
+                            <button class="btn_latest">Latest</button>
+                            <div class="date_div">02/03/2023</div>
+                            <div>
+                                <svg style="margin-left: 75px;" xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 46 47" fill="none">
+  <path d="M25.3664 10.0539C25.2996 10.1207 25.2466 10.2 25.2104 10.2872C25.1742 10.3745 25.1556 10.468 25.1556 10.5625C25.1556 10.6569 25.1742 10.7505 25.2104 10.8377C25.2466 10.925 25.2996 11.0042 25.3664 11.071L37.0766 22.7812H7.18742C6.9968 22.7812 6.81398 22.8569 6.67919 22.9917C6.5444 23.1265 6.46867 23.3093 6.46867 23.5C6.46867 23.6906 6.5444 23.8734 6.67919 24.0082C6.81398 24.143 6.9968 24.2187 7.18742 24.2187H37.0766L25.3664 35.929C25.2996 35.9957 25.2467 36.075 25.2105 36.1623C25.1744 36.2495 25.1558 36.343 25.1558 36.4375C25.1558 36.5319 25.1744 36.6254 25.2105 36.7127C25.2467 36.7999 25.2996 36.8792 25.3664 36.946C25.4332 37.0128 25.5125 37.0657 25.5997 37.1019C25.687 37.138 25.7805 37.1566 25.8749 37.1566C25.9694 37.1566 26.0629 37.138 26.1501 37.1019C26.2374 37.0657 26.3167 37.0128 26.3834 36.946L39.3209 24.0085C39.3878 23.9417 39.4408 23.8625 39.4769 23.7752C39.5131 23.688 39.5317 23.5944 39.5317 23.5C39.5317 23.4055 39.5131 23.312 39.4769 23.2247C39.4408 23.1375 39.3878 23.0582 39.3209 22.9915L26.3834 10.0539C26.3167 9.98712 26.2374 9.93411 26.1502 9.89794C26.0629 9.86177 25.9694 9.84315 25.8749 9.84315C25.7805 9.84315 25.6869 9.86177 25.5997 9.89794C25.5124 9.93411 25.4332 9.98712 25.3664 10.0539Z" fill="#283618"/>
+</svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        </header>
-        
-        <div class="inner_fltr_box">
-            <div class="top_line_leads"></div>
-
-        <!-- <div class="fltr_header">
-        </div> -->
+            </div>
+            <!-- 3 -->
+            <div class="story_box1">
+                <div><img class="story1_img" src="/wss_img/story1.png" alt=""></div>
+                <div class="story_dtls">
+                    <div class="story_txt1_div">
+                        <div class="story_txt1">ASHAKIRANAM DRESS BANK – A <br> PHILANTHROPIC MOVEMENT</div>
+                        <div class="posted_dtls">
+                            <button class="btn_latest">Latest</button>
+                            <div class="date_div">02/03/2023</div>
+                            <div>
+                                <svg style="margin-left: 75px;" xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 46 47" fill="none">
+  <path d="M25.3664 10.0539C25.2996 10.1207 25.2466 10.2 25.2104 10.2872C25.1742 10.3745 25.1556 10.468 25.1556 10.5625C25.1556 10.6569 25.1742 10.7505 25.2104 10.8377C25.2466 10.925 25.2996 11.0042 25.3664 11.071L37.0766 22.7812H7.18742C6.9968 22.7812 6.81398 22.8569 6.67919 22.9917C6.5444 23.1265 6.46867 23.3093 6.46867 23.5C6.46867 23.6906 6.5444 23.8734 6.67919 24.0082C6.81398 24.143 6.9968 24.2187 7.18742 24.2187H37.0766L25.3664 35.929C25.2996 35.9957 25.2467 36.075 25.2105 36.1623C25.1744 36.2495 25.1558 36.343 25.1558 36.4375C25.1558 36.5319 25.1744 36.6254 25.2105 36.7127C25.2467 36.7999 25.2996 36.8792 25.3664 36.946C25.4332 37.0128 25.5125 37.0657 25.5997 37.1019C25.687 37.138 25.7805 37.1566 25.8749 37.1566C25.9694 37.1566 26.0629 37.138 26.1501 37.1019C26.2374 37.0657 26.3167 37.0128 26.3834 36.946L39.3209 24.0085C39.3878 23.9417 39.4408 23.8625 39.4769 23.7752C39.5131 23.688 39.5317 23.5944 39.5317 23.5C39.5317 23.4055 39.5131 23.312 39.4769 23.2247C39.4408 23.1375 39.3878 23.0582 39.3209 22.9915L26.3834 10.0539C26.3167 9.98712 26.2374 9.93411 26.1502 9.89794C26.0629 9.86177 25.9694 9.84315 25.8749 9.84315C25.7805 9.84315 25.6869 9.86177 25.5997 9.89794C25.5124 9.93411 25.4332 9.98712 25.3664 10.0539Z" fill="#283618"/>
+</svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="story_box1">
+                <div><img class="story1_img" src="/wss_img/story2.png" alt=""></div>
+                <div class="story_dtls">
+                    <div class="story_txt1_div">
+                        <div class="story_txt1">ASHAKIRANAM DRESS BANK – A <br> PHILANTHROPIC MOVEMENT</div>
+                        <div class="posted_dtls">
+                            <button class="btn_latest">Latest</button>
+                            <div class="date_div">02/03/2023</div>
+                            <div>
+                                <svg style="margin-left: 75px;" xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 46 47" fill="none">
+  <path d="M25.3664 10.0539C25.2996 10.1207 25.2466 10.2 25.2104 10.2872C25.1742 10.3745 25.1556 10.468 25.1556 10.5625C25.1556 10.6569 25.1742 10.7505 25.2104 10.8377C25.2466 10.925 25.2996 11.0042 25.3664 11.071L37.0766 22.7812H7.18742C6.9968 22.7812 6.81398 22.8569 6.67919 22.9917C6.5444 23.1265 6.46867 23.3093 6.46867 23.5C6.46867 23.6906 6.5444 23.8734 6.67919 24.0082C6.81398 24.143 6.9968 24.2187 7.18742 24.2187H37.0766L25.3664 35.929C25.2996 35.9957 25.2467 36.075 25.2105 36.1623C25.1744 36.2495 25.1558 36.343 25.1558 36.4375C25.1558 36.5319 25.1744 36.6254 25.2105 36.7127C25.2467 36.7999 25.2996 36.8792 25.3664 36.946C25.4332 37.0128 25.5125 37.0657 25.5997 37.1019C25.687 37.138 25.7805 37.1566 25.8749 37.1566C25.9694 37.1566 26.0629 37.138 26.1501 37.1019C26.2374 37.0657 26.3167 37.0128 26.3834 36.946L39.3209 24.0085C39.3878 23.9417 39.4408 23.8625 39.4769 23.7752C39.5131 23.688 39.5317 23.5944 39.5317 23.5C39.5317 23.4055 39.5131 23.312 39.4769 23.2247C39.4408 23.1375 39.3878 23.0582 39.3209 22.9915L26.3834 10.0539C26.3167 9.98712 26.2374 9.93411 26.1502 9.89794C26.0629 9.86177 25.9694 9.84315 25.8749 9.84315C25.7805 9.84315 25.6869 9.86177 25.5997 9.89794C25.5124 9.93411 25.4332 9.98712 25.3664 10.0539Z" fill="#283618"/>
+</svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+             <!--  -->
+            <div class="story_header">Breaking Stories</div>
+        </div>
         <!--  -->
-        <div v-if="modalContent === 'leadDetails'">
-            <div class="crm_details">
-        <div class="new_btn">
-            <div class="txt_filter3" >New</div>
-            <div><select name="" id=""></select></div>
+
+        <!-- about-us -->
+        <div class="about_div">
+            <div class="head_prjct">
+                <div class="txt_projects">Projects</div>
+                <img  src="/wss_img/Glow.png" alt="">
+            </div>
+            <div class="projct_pstr_div">
+                <div class="poster_div">
+                    <img src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="poster_div2">
+                    <img class="" src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="poster_div2">
+                    <img class="" src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="poster_div2">
+                    <img class="" src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="poster_div2">
+                    <img class="" src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+            </div>
+            <!-- mob-version-poster -->
+            <div class="projct_pstr_div_mob">
+                <div class="poster_div">
+                    <img src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="poster_div2">
+                    <img class="" src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="poster_div2">
+                    <img class="" src="/wss_img/prjct.png" alt="">
+                    <div class="postr_dtls">
+                        <div class="pstr_txt">WSSS IS FORMING 200 JOINT <br> LIABILITY GROUPS (JLGS)..</div>
+                        <div class="pstr_date">2022-01-25</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="name_location">
-            <div class="txt_filter2">Octopus Car Spa</div>
-            <div class="location_dtls">
+        <!-- updates-div -->
+        <div class="update_div">
+            <div class="txt_updates_evnts">Updates & Events</div>
+            <div class="update_pstr_div">
+                <div class="hover_div">
+                    <div class="border_gren"></div>
+                    <div class="updt_pstr_hover">
+                        <div class="updt_pstr_dtls">
+                        <img src="/wss_img/updt_prjct_wsss.png" alt="">
+                        <div class="updt_txt1">WSSS is forming 200 joint lability  groups (JLGS)</div>
+                        <div class="updt_txt2">Mar Sebastian Kallupura, Chairman, Caritas India  and Archbishop of the Diocese of Patna, formally inaugurated the housin...</div>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+  <path d="M30.8807 11.6309C30.7994 11.7122 30.7348 11.8087 30.6908 11.9149C30.6468 12.0211 30.6241 12.135 30.6241 12.25C30.6241 12.365 30.6468 12.4789 30.6908 12.5851C30.7348 12.6913 30.7994 12.7878 30.8807 12.8691L45.1367 27.125L8.7498 27.125C8.51773 27.125 8.29518 27.2172 8.13108 27.3813C7.96699 27.5454 7.8748 27.7679 7.8748 28C7.8748 28.2321 7.96699 28.4546 8.13108 28.6187C8.29518 28.7828 8.51773 28.875 8.7498 28.875H45.1367L30.8807 43.1309C30.7994 43.2122 30.735 43.3087 30.691 43.415C30.647 43.5212 30.6243 43.635 30.6243 43.75C30.6243 43.865 30.647 43.9788 30.691 44.085C30.735 44.1913 30.7994 44.2878 30.8807 44.3691C30.962 44.4504 31.0585 44.5148 31.1648 44.5588C31.271 44.6028 31.3848 44.6255 31.4998 44.6255C31.6148 44.6255 31.7286 44.6028 31.8348 44.5588C31.9411 44.5148 32.0376 44.4504 32.1189 44.3691L47.8689 28.6191C47.9502 28.5378 48.0148 28.4413 48.0588 28.3351C48.1028 28.2289 48.1255 28.115 48.1255 28C48.1255 27.885 48.1028 27.7712 48.0588 27.6649C48.0148 27.5587 47.9502 27.4622 47.8689 27.3809L32.1189 11.6309C32.0376 11.5496 31.9411 11.485 31.8349 11.441C31.7286 11.397 31.6148 11.3743 31.4998 11.3743C31.3848 11.3743 31.271 11.397 31.1647 11.441C31.0585 11.485 30.962 11.5496 30.8807 11.6309Z" fill="#283618"/>
+</svg>
+                    </div>
+                    </div>
+                </div>
+                <div class="updt_pstr">
+                    <div class="updt_pstr_dtls">
+                        <img src="/wss_img/updt_prjct_wsss.png" alt="">
+                        <div class="updt_txt1">WSSS is forming 200 joint lability  groups (JLGS)</div>
+                        <div class="updt_txt2">Mar Sebastian Kallupura, Chairman, Caritas India  and Archbishop of the Diocese of Patna, formally inaugurated the housin...</div>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+  <path d="M30.8807 11.6309C30.7994 11.7122 30.7348 11.8087 30.6908 11.9149C30.6468 12.0211 30.6241 12.135 30.6241 12.25C30.6241 12.365 30.6468 12.4789 30.6908 12.5851C30.7348 12.6913 30.7994 12.7878 30.8807 12.8691L45.1367 27.125L8.7498 27.125C8.51773 27.125 8.29518 27.2172 8.13108 27.3813C7.96699 27.5454 7.8748 27.7679 7.8748 28C7.8748 28.2321 7.96699 28.4546 8.13108 28.6187C8.29518 28.7828 8.51773 28.875 8.7498 28.875H45.1367L30.8807 43.1309C30.7994 43.2122 30.735 43.3087 30.691 43.415C30.647 43.5212 30.6243 43.635 30.6243 43.75C30.6243 43.865 30.647 43.9788 30.691 44.085C30.735 44.1913 30.7994 44.2878 30.8807 44.3691C30.962 44.4504 31.0585 44.5148 31.1648 44.5588C31.271 44.6028 31.3848 44.6255 31.4998 44.6255C31.6148 44.6255 31.7286 44.6028 31.8348 44.5588C31.9411 44.5148 32.0376 44.4504 32.1189 44.3691L47.8689 28.6191C47.9502 28.5378 48.0148 28.4413 48.0588 28.3351C48.1028 28.2289 48.1255 28.115 48.1255 28C48.1255 27.885 48.1028 27.7712 48.0588 27.6649C48.0148 27.5587 47.9502 27.4622 47.8689 27.3809L32.1189 11.6309C32.0376 11.5496 31.9411 11.485 31.8349 11.441C31.7286 11.397 31.6148 11.3743 31.4998 11.3743C31.3848 11.3743 31.271 11.397 31.1647 11.441C31.0585 11.485 30.962 11.5496 30.8807 11.6309Z" fill="#283618"/>
+</svg>
+                    </div>
+                </div>
+                <div class="hover_div">
+                    <div class="border_gren"></div>
+                    <div class="updt_pstr_hover">
+                        <div class="updt_pstr_dtls">
+                        <img src="/wss_img/updt_prjct_wsss.png" alt="">
+                        <div class="updt_txt1">WSSS is forming 200 joint lability  groups (JLGS)</div>
+                        <div class="updt_txt2">Mar Sebastian Kallupura, Chairman, Caritas India  and Archbishop of the Diocese of Patna, formally inaugurated the housin...</div>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+  <path d="M30.8807 11.6309C30.7994 11.7122 30.7348 11.8087 30.6908 11.9149C30.6468 12.0211 30.6241 12.135 30.6241 12.25C30.6241 12.365 30.6468 12.4789 30.6908 12.5851C30.7348 12.6913 30.7994 12.7878 30.8807 12.8691L45.1367 27.125L8.7498 27.125C8.51773 27.125 8.29518 27.2172 8.13108 27.3813C7.96699 27.5454 7.8748 27.7679 7.8748 28C7.8748 28.2321 7.96699 28.4546 8.13108 28.6187C8.29518 28.7828 8.51773 28.875 8.7498 28.875H45.1367L30.8807 43.1309C30.7994 43.2122 30.735 43.3087 30.691 43.415C30.647 43.5212 30.6243 43.635 30.6243 43.75C30.6243 43.865 30.647 43.9788 30.691 44.085C30.735 44.1913 30.7994 44.2878 30.8807 44.3691C30.962 44.4504 31.0585 44.5148 31.1648 44.5588C31.271 44.6028 31.3848 44.6255 31.4998 44.6255C31.6148 44.6255 31.7286 44.6028 31.8348 44.5588C31.9411 44.5148 32.0376 44.4504 32.1189 44.3691L47.8689 28.6191C47.9502 28.5378 48.0148 28.4413 48.0588 28.3351C48.1028 28.2289 48.1255 28.115 48.1255 28C48.1255 27.885 48.1028 27.7712 48.0588 27.6649C48.0148 27.5587 47.9502 27.4622 47.8689 27.3809L32.1189 11.6309C32.0376 11.5496 31.9411 11.485 31.8349 11.441C31.7286 11.397 31.6148 11.3743 31.4998 11.3743C31.3848 11.3743 31.271 11.397 31.1647 11.441C31.0585 11.485 30.962 11.5496 30.8807 11.6309Z" fill="#283618"/>
+</svg>
+                    </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="updt_pstr2">
+                    <div class="updt_pstr_dtls">
+                        <img src="/wss_img/updt_prjct_wsss.png" alt="">
+                        <div class="updt_txt1">WSSS is forming 200 joint lability  groups (JLGS)</div>
+                        <div class="updt_txt2">Mar Sebastian Kallupura, Chairman, Caritas India  and Archbishop of the Diocese of Patna, formally inaugurated the housin...</div>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+  <path d="M30.8807 11.6309C30.7994 11.7122 30.7348 11.8087 30.6908 11.9149C30.6468 12.0211 30.6241 12.135 30.6241 12.25C30.6241 12.365 30.6468 12.4789 30.6908 12.5851C30.7348 12.6913 30.7994 12.7878 30.8807 12.8691L45.1367 27.125L8.7498 27.125C8.51773 27.125 8.29518 27.2172 8.13108 27.3813C7.96699 27.5454 7.8748 27.7679 7.8748 28C7.8748 28.2321 7.96699 28.4546 8.13108 28.6187C8.29518 28.7828 8.51773 28.875 8.7498 28.875H45.1367L30.8807 43.1309C30.7994 43.2122 30.735 43.3087 30.691 43.415C30.647 43.5212 30.6243 43.635 30.6243 43.75C30.6243 43.865 30.647 43.9788 30.691 44.085C30.735 44.1913 30.7994 44.2878 30.8807 44.3691C30.962 44.4504 31.0585 44.5148 31.1648 44.5588C31.271 44.6028 31.3848 44.6255 31.4998 44.6255C31.6148 44.6255 31.7286 44.6028 31.8348 44.5588C31.9411 44.5148 32.0376 44.4504 32.1189 44.3691L47.8689 28.6191C47.9502 28.5378 48.0148 28.4413 48.0588 28.3351C48.1028 28.2289 48.1255 28.115 48.1255 28C48.1255 27.885 48.1028 27.7712 48.0588 27.6649C48.0148 27.5587 47.9502 27.4622 47.8689 27.3809L32.1189 11.6309C32.0376 11.5496 31.9411 11.485 31.8349 11.441C31.7286 11.397 31.6148 11.3743 31.4998 11.3743C31.3848 11.3743 31.271 11.397 31.1647 11.441C31.0585 11.485 30.962 11.5496 30.8807 11.6309Z" fill="#283618"/>
+</svg>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="hover_div">
+                    <div class="border_gren"></div>
+                    <div class="updt_pstr_hover">
+                        <div class="updt_pstr_dtls">
+                        <img src="/wss_img/updt_prjct_wsss.png" alt="">
+                        <div class="updt_txt1">WSSS is forming 200 joint lability  groups (JLGS)</div>
+                        <div class="updt_txt2">Mar Sebastian Kallupura, Chairman, Caritas India  and Archbishop of the Diocese of Patna, formally inaugurated the housin...</div>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+  <path d="M30.8807 11.6309C30.7994 11.7122 30.7348 11.8087 30.6908 11.9149C30.6468 12.0211 30.6241 12.135 30.6241 12.25C30.6241 12.365 30.6468 12.4789 30.6908 12.5851C30.7348 12.6913 30.7994 12.7878 30.8807 12.8691L45.1367 27.125L8.7498 27.125C8.51773 27.125 8.29518 27.2172 8.13108 27.3813C7.96699 27.5454 7.8748 27.7679 7.8748 28C7.8748 28.2321 7.96699 28.4546 8.13108 28.6187C8.29518 28.7828 8.51773 28.875 8.7498 28.875H45.1367L30.8807 43.1309C30.7994 43.2122 30.735 43.3087 30.691 43.415C30.647 43.5212 30.6243 43.635 30.6243 43.75C30.6243 43.865 30.647 43.9788 30.691 44.085C30.735 44.1913 30.7994 44.2878 30.8807 44.3691C30.962 44.4504 31.0585 44.5148 31.1648 44.5588C31.271 44.6028 31.3848 44.6255 31.4998 44.6255C31.6148 44.6255 31.7286 44.6028 31.8348 44.5588C31.9411 44.5148 32.0376 44.4504 32.1189 44.3691L47.8689 28.6191C47.9502 28.5378 48.0148 28.4413 48.0588 28.3351C48.1028 28.2289 48.1255 28.115 48.1255 28C48.1255 27.885 48.1028 27.7712 48.0588 27.6649C48.0148 27.5587 47.9502 27.4622 47.8689 27.3809L32.1189 11.6309C32.0376 11.5496 31.9411 11.485 31.8349 11.441C31.7286 11.397 31.6148 11.3743 31.4998 11.3743C31.3848 11.3743 31.271 11.397 31.1647 11.441C31.0585 11.485 30.962 11.5496 30.8807 11.6309Z" fill="#283618"/>
+</svg>
+                    </div>
+                    </div>
+                </div>
+                <div class="updt_pstr2">
+                    <div class="updt_pstr_dtls">
+                        <img src="/wss_img/updt_prjct_wsss.png" alt="">
+                        <div class="updt_txt1">WSSS is forming 200 joint lability  groups (JLGS)</div>
+                        <div class="updt_txt2">Mar Sebastian Kallupura, Chairman, Caritas India  and Archbishop of the Diocese of Patna, formally inaugurated the housin...</div>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+  <path d="M30.8807 11.6309C30.7994 11.7122 30.7348 11.8087 30.6908 11.9149C30.6468 12.0211 30.6241 12.135 30.6241 12.25C30.6241 12.365 30.6468 12.4789 30.6908 12.5851C30.7348 12.6913 30.7994 12.7878 30.8807 12.8691L45.1367 27.125L8.7498 27.125C8.51773 27.125 8.29518 27.2172 8.13108 27.3813C7.96699 27.5454 7.8748 27.7679 7.8748 28C7.8748 28.2321 7.96699 28.4546 8.13108 28.6187C8.29518 28.7828 8.51773 28.875 8.7498 28.875H45.1367L30.8807 43.1309C30.7994 43.2122 30.735 43.3087 30.691 43.415C30.647 43.5212 30.6243 43.635 30.6243 43.75C30.6243 43.865 30.647 43.9788 30.691 44.085C30.735 44.1913 30.7994 44.2878 30.8807 44.3691C30.962 44.4504 31.0585 44.5148 31.1648 44.5588C31.271 44.6028 31.3848 44.6255 31.4998 44.6255C31.6148 44.6255 31.7286 44.6028 31.8348 44.5588C31.9411 44.5148 32.0376 44.4504 32.1189 44.3691L47.8689 28.6191C47.9502 28.5378 48.0148 28.4413 48.0588 28.3351C48.1028 28.2289 48.1255 28.115 48.1255 28C48.1255 27.885 48.1028 27.7712 48.0588 27.6649C48.0148 27.5587 47.9502 27.4622 47.8689 27.3809L32.1189 11.6309C32.0376 11.5496 31.9411 11.485 31.8349 11.441C31.7286 11.397 31.6148 11.3743 31.4998 11.3743C31.3848 11.3743 31.271 11.397 31.1647 11.441C31.0585 11.485 30.962 11.5496 30.8807 11.6309Z" fill="#283618"/>
+</svg>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+                <!-- mob-mission -->
+                <div class="vision_mob_div">
+            <div class="mob_visin_div1">
+                <div class="mob_dtls_div">
+                    <div>(1)</div>
+                    <div class="mob_txt_visin">Our vision</div>
+                </div>
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M10 17.4162L14.1248 13.2914C16.4028 11.0134 16.4028 7.31989 14.1248 5.04183C11.8468 2.76378 8.15327 2.76378 5.87521 5.04183C3.59715 7.31989 3.59715 11.0134 5.87521 13.2914L10 17.4162ZM10 19.7732L4.6967 14.47C1.76777 11.541 1.76777 6.79226 4.6967 3.86333C7.62563 0.934393 12.3743 0.934393 15.3033 3.86333C18.2323 6.79226 18.2323 11.541 15.3033 14.47L10 19.7732ZM10 10.8333C10.9205 10.8333 11.6667 10.0871 11.6667 9.16663C11.6667 8.24615 10.9205 7.49996 10 7.49996C9.0795 7.49996 8.33333 8.24615 8.33333 9.16663C8.33333 10.0871 9.0795 10.8333 10 10.8333ZM10 12.5C8.15905 12.5 6.66667 11.0075 6.66667 9.16663C6.66667 7.32568 8.15905 5.83329 10 5.83329C11.8409 5.83329 13.3333 7.32568 13.3333 9.16663C13.3333 11.0075 11.8409 12.5 10 12.5Z" fill="#555555"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+  <path d="M22.0417 23.9583H11.5V22.0417H22.0417V11.5H23.9583V22.0417H34.5V23.9583H23.9583V34.5H22.0417V23.9583Z" fill="#283618"/>
 </svg>
                 </div>
-                <div>8B, Summer sandal canal Road <br> Thrikkakkara, Kochi</div>
             </div>
-        </div>
-    </div>
-
-    <div class="cntact_dtls">
-        <div class="cntct_name">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M5.83332 4.16671V1.66671C5.83332 1.20647 6.20642 0.833374 6.66666 0.833374H13.3333C13.7936 0.833374 14.1667 1.20647 14.1667 1.66671V4.16671H17.5C17.9602 4.16671 18.3333 4.53981 18.3333 5.00004V16.6667C18.3333 17.127 17.9602 17.5 17.5 17.5H2.49999C2.03976 17.5 1.66666 17.127 1.66666 16.6667V5.00004C1.66666 4.53981 2.03976 4.16671 2.49999 4.16671H5.83332ZM16.6667 10.8334H3.33332V15.8334H16.6667V10.8334ZM16.6667 5.83337H3.33332V9.16671H5.83332V7.50004H7.49999V9.16671H12.5V7.50004H14.1667V9.16671H16.6667V5.83337ZM7.49999 2.50004V4.16671H12.5V2.50004H7.49999Z" fill="#555555"/>
-</svg>
-            </div>
-            <div>Car wash</div>
-        </div>
-        <!-- 2 -->
-        <div class="cntct_name">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M7.80463 8.90175C8.585 10.274 9.726 11.415 11.0982 12.1953L11.8353 11.1634C12.0804 10.8204 12.543 10.7144 12.913 10.9165C14.0853 11.5569 15.3809 11.9461 16.7324 12.0531C17.1658 12.0874 17.5 12.4491 17.5 12.8838V16.6028C17.5 17.0301 17.1768 17.3881 16.7518 17.4318C16.3102 17.4772 15.8647 17.5 15.4167 17.5C8.28299 17.5 2.5 11.717 2.5 4.58333C2.5 4.13522 2.52285 3.68976 2.56824 3.24813C2.61192 2.82312 2.96995 2.5 3.39721 2.5H7.11618C7.55092 2.5 7.91261 2.8342 7.94692 3.26757C8.05389 4.61907 8.44308 5.9147 9.0835 7.08703C9.28558 7.457 9.17958 7.91962 8.83658 8.16464L7.80463 8.90175ZM5.70354 8.35433L7.28683 7.22341C6.83789 6.25428 6.53023 5.22652 6.37273 4.16667H4.17422C4.16919 4.30527 4.16667 4.44417 4.16667 4.58333C4.16667 10.7965 9.2035 15.8333 15.4167 15.8333C15.5558 15.8333 15.6947 15.8308 15.8333 15.8257V13.6272C14.7735 13.4697 13.7457 13.1621 12.7766 12.7132L11.6457 14.2965C11.1882 14.1187 10.7463 13.9096 10.3228 13.6717L10.2744 13.6442C8.64142 12.7156 7.28445 11.3586 6.35583 9.72558L6.32828 9.67717C6.09041 9.25367 5.88128 8.81183 5.70354 8.35433Z" fill="#555555"/>
-</svg>
-            </div>
-            <div>+91974689545</div>
-        </div>
-        <!-- 3 -->
-        <div class="email_dtls">
-            <div class="avlble_stats">
+            <!-- 2 -->
+            <div class="mob_visin_div1_grn">
+                <div class="mob_dtls_div">
+                    <div>(1)</div>
+                    <div class="mob_txt_visin_grn">Our vision</div>
+                </div>
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M2.49999 2.5H17.5C17.9602 2.5 18.3333 2.8731 18.3333 3.33333V16.6667C18.3333 17.1269 17.9602 17.5 17.5 17.5H2.49999C2.03976 17.5 1.66666 17.1269 1.66666 16.6667V3.33333C1.66666 2.8731 2.03976 2.5 2.49999 2.5ZM16.6667 6.0316L10.0598 11.9483L3.33332 6.01328V15.8333H16.6667V6.0316ZM3.75954 4.16667L10.0516 9.71833L16.2508 4.16667H3.75954Z" fill="#555555"/>
-</svg>
-                </div>
-                <div>Not available</div>
-            </div>
-            <div class="txt_add_mail">Add email</div>
-        </div>
-        <!-- 4 -->
-        <div class="cntct_name">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M9.99999 18.3333C5.39761 18.3333 1.66666 14.6023 1.66666 9.99996C1.66666 5.39758 5.39761 1.66663 9.99999 1.66663C14.6023 1.66663 18.3333 5.39758 18.3333 9.99996C18.3333 14.6023 14.6023 18.3333 9.99999 18.3333ZM8.09167 16.3895C7.28951 14.6882 6.79776 12.8118 6.68941 10.8333H3.3849C3.71499 13.4804 5.59698 15.6455 8.09167 16.3895ZM8.35891 10.8333C8.48424 12.8656 9.06482 14.7747 9.99999 16.46C10.9352 14.7747 11.5157 12.8656 11.6411 10.8333H8.35891ZM16.6151 10.8333H13.3106C13.2022 12.8118 12.7105 14.6882 11.9083 16.3895C14.403 15.6455 16.285 13.4804 16.6151 10.8333ZM3.3849 9.16663H6.68941C6.79776 7.1881 7.28951 5.31168 8.09167 3.61043C5.59698 4.3544 3.71499 6.51954 3.3849 9.16663ZM8.35891 9.16663H11.6411C11.5157 7.13431 10.9352 5.22517 9.99999 3.53995C9.06482 5.22517 8.48424 7.13431 8.35891 9.16663ZM11.9083 3.61043C12.7105 5.31168 13.2022 7.1881 13.3106 9.16663H16.6151C16.285 6.51954 14.403 4.3544 11.9083 3.61043Z" fill="#555555"/>
-</svg>
-            </div>
-            <div>www.octopuscarspaservice.com</div>
-        </div>
-    </div>
-    <div class="notebtn_actvtybtn">
-          <button @click="openModal('addNote')" class="btn_note">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-<path d="M9.91666 9.16663V4.16663H11.5833V9.16663H16.5833V10.8333H11.5833V15.8333H9.91666V10.8333H4.91666V9.16663H9.91666Z" fill="white"/>
-</svg>Add Note
-          </button>
-          
-          <button @click="openModal('logActivity')" class="actvty_btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-<path d="M10.75 1.66663C15.3523 1.66663 19.0833 5.39758 19.0833 9.99996C19.0833 14.6023 15.3523 18.3333 10.75 18.3333C6.14763 18.3333 2.41667 14.6023 2.41667 9.99996H4.08334C4.08334 13.6819 7.0681 16.6666 10.75 16.6666C14.4319 16.6666 17.4167 13.6819 17.4167 9.99996C17.4167 6.31806 14.4319 3.33329 10.75 3.33329C8.45852 3.33329 6.43706 4.48941 5.2371 6.25016L7.41667 6.24996V7.91663H2.41667V2.91663H4.08334L4.08325 4.99928C5.60362 2.97558 8.02395 1.66663 10.75 1.66663ZM11.5833 5.83329L11.5832 9.65413L14.2855 12.357L13.107 13.5355L9.9165 10.3441L9.91667 5.83329H11.5833Z" fill="#555555"/>
-</svg>Log Activity
-          </button>
-        </div>
-        </div>
-    
-        
-        
-
-        <!-- add_note & log_actvty -->
-        <div v-else-if="modalContent === 'addNote'">
-    <!--  --> 
-    <div class="add_note_box">
-        <div><input type="text" placeholder="Add your note"></div>
-        <div class="box_head">
-            <div class="txt_box_head">Enter Description</div>
-        </div>
-    </div>      
-    <!-- update-btn -->
-    <router-link :to="{ name: 'home'}">  <button class="update_btn">Save note</button></router-link>
-</div>
-
-    <div v-else-if="modalContent === 'logActivity'">
-    <!--  --> 
-    <div class="log_actvty_dtls">
-        <div>Add your log activity here</div>
-        <div class="call_mail_div">
-            <div  @click="ActiveCall('call')" :class="{ call_active: activeCall === 'call' }" class="btn_call">Call</div>
-            <div  @click="ActiveCall('mail')" :class="{ call_active: activeCall === 'mail' }" class="btn_mail">Mail</div>
-        </div>
-    </div>
-
-    <div class="add_note_box_actvty">
-        <div><input type="text" placeholder="Add your activity"></div>
-        <div class="box_head_actvty">
-            <div class="txt_box_head_actvty">Enter Activity</div>
-        </div>
-    </div>  
-
-    <div class="date_time_div">
-        <div class="date_div">
-            <div class="head_date">Date</div>
-            <div><input class="inpt_date" type="date"></div>
-        </div>
-        <div class="time_div">
-            <div><input class="inpt_date" type="time"></div>
-            <div class="head_time">Time</div>
-        </div>
-    </div>
-    <!-- update-btn -->
-    <router-link :to="{ name: 'home'}">  <button class="update_btn_actvty">Save Activity</button> </router-link>
-    <br><br>
-    </div>
-    </div>
-    
-    </b-modal>
-
-
-    <!-- 2 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Car wash</div>
-            <div class="sub_txt">JP Car & Bike Wash</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 3 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Car wash</div>
-            <div class="sub_txt">Hermosa Car spa & cafe</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 4 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Car wash</div>
-            <div class="sub_txt">JP Car & Bike Wash</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 5 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Car wash</div>
-            <div class="sub_txt">JP Car & Bike Wash</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 6 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Car wash</div>
-            <div class="sub_txt">Octopus Car Spa</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-        <!-- show- more -->
-        <div class="show_more_div">
-            <div class="white_box"></div>
-
-            <div class="show_more_box">
-                <div class="txt_show_more">Show more
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z" fill="#00BD84"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+  <path d="M22.0417 23.9583H11.5V22.0417H22.0417V11.5H23.9583V22.0417H34.5V23.9583H23.9583V34.5H22.0417V23.9583Z" fill="#FEFAE0"/>
 </svg>
                 </div>
             </div>
-        </div>
-
-        <!--  -->
-        <div class="day_dtls_sect2">
-        <div class="txt_month_day">Tuesday, Oct 03</div>
-    </div>
-    <!--  -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Real-estate</div>
-            <div class="sub_txt">PropForAll Global Realty</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 2 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Real-estate</div>
-            <div class="sub_txt">PropForAll Global Realty</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 3 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Real-estate</div>
-            <div class="sub_txt">PropForAll Global Realty</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 4 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Real-estate</div>
-            <div class="sub_txt">Kochirealtor</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 5 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Real-estate</div>
-            <div class="sub_txt">Real Estate Kochi</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 6 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Real-estate</div>
-            <div class="sub_txt">Kerala Real Estate</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div>
-    <!-- 7 -->
-    <div class="option_div">
-        <div class="sect_one">
-            <div class="main_txt">Real-estate</div>
-            <div class="sub_txt">A Star Realtors</div>
-        </div>
-        <div class="sect_two">
-            <div class="txt_new">New</div>
-            <div class="txt_time">1  Hour ago</div>
-        </div>
-    </div><br><br><br><br><br>
-
-    <!-- download_btn_grp -->
-
-    <div class="dwlnd_btn_grp">
-      <button @click="openSecondModal" class="btn_dwlnd">
-        <img src="/lead_finder/download-line.png" alt=""> Download Leads
-      </button>
-      <b-modal v-model="isSecondModalVisible" centered hide-footer hide-header id="dwnld_modal">
-        <header class="header_popup">
-            <div class="top_bar"></div> 
-            <div class="pop_head">
-                <div class="txt_filter_dwnld">Download Leads</div>
-                    <button @click="$bvModal.hide('dwnld_modal')" class="close_button">x</button>
+            <!-- 3 -->
+            <div class="mob_visin_div1">
+                <div class="mob_dtls_div">
+                    <div>(1)</div>
+                    <div class="mob_txt_visin">Our vision</div>
                 </div>
-        </header>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+  <path d="M22.0417 23.9583H11.5V22.0417H22.0417V11.5H23.9583V22.0417H34.5V23.9583H23.9583V34.5H22.0417V23.9583Z" fill="#283618"/>
+</svg>
+                </div>
+            </div>
+            <!--  -->
+                </div>
+        <!-- end -of mob-mission -->
        
-    <div class="inner_fltr_box">
-        <!-- <div class="fltr_header">
-            
-        </div> -->
-        <div class="top_line"></div>
-        <div class="categry_status_box">
-            <div class="categrybox_statusbox">
-                <div class="categry_box">
-                    <div class="txt_catgry">Category</div>
-                    <div class="slct_ctgry">
-                        <!-- <div class="txt_carwsh"></div> -->
-                        <select class="txt_carwsh" name="" id="">
-                            <option class="txt_carwsh" value="">Car Wash</option>
-                            <option value="">Sample</option>
-                            <option value="">Sample2</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- status-box-->
-                <div class="categry_box">
-                    <div class="txt_catgry">Status</div>
-                    <div class="slct_ctgry">
-                        <!-- <div class="txt_carwsh">All</div> -->
-                        <select class="txt_carwsh" name="All" id="">
-                            <option class="txt_carwsh" value="">All</option>
-                            <option value="">sample</option>
-                            <option value="">sample2</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="top_line_dwnld"></div> -->
-            <div class="advncd_bordr">
-                <div class="advncd_sttngs_box" @click="toggleDateTimeDiv">
-                <div class="txt_carwsh">Advanced settings</div>
-                <img class="down_img" src="/lead_finder/arrow-down-s-line.png" alt="">
-            </div>
+        <!--  -->
 
-            <div class="date_time_div" v-if="showDateTimeDiv">
-            <div class="date_div">
-                <div class="head_date2">Date</div>
-                <div><input class="inpt_date" type="date"></div>
+        <!-- mission-vision-div -->
+        <div class="mission_vision_div">
+            <div class="img_sect_div">
+                <div><img src="/wss_img/mission_wsss.png" alt=""></div>
+                <div class="txt_mision">The Society has its Vision stated as “Self reliant and vibrant human communities living in a sustainable environment cherishing human
+                 values of love, justice, solidarity and human dignity as well as their equity in the social capital ascertained.
+                </div>
             </div>
-            <div class="time_div">
-                <div><input class="inpt_date" type="time"></div>
-                <div class="head_time2">Time</div>
+            <!--  -->
+            <div class="detail_sect_div">
+                <div class="vision_div">
+                    <div class="txt_sect">
+                        <div class="si_no">(1)</div>
+                        <div class="visn_txt_dtls">
+                            <div class="vision_1">Our vision</div>
+                            <div class="vision_2">
+                                Society's Vision: Self-reliant, vibrant, just, dignified human communities sustainably living in love, solidarity, and equity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="vision_div">
+                    <div class="txt_sect">
+                        <div class="si_no">(2)</div>
+                        <div class="visn_txt_dtls">
+                            <div class="vision_1">Our mission</div>
+                            <div class="vision_2">
+                                Society's Vision: Self-reliant, vibrant, just, dignified human communities sustainably living in love, solidarity, and equity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="vision_div">
+                    <div class="txt_sect">
+                        <div class="si_no">(3)</div>
+                        <div class="visn_txt_dtls">
+                            <div class="vision_1">Our objective</div>
+                            <div class="vision_2">
+                                Society's Vision: Self-reliant, vibrant, just, dignified human communities sustainably living in love, solidarity, and equity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
             </div>
         </div>
-            </div>
-            <!-- tags -->
+        <!-- mob-version-donate -->
+        <img class="mob_dnte_gif" src="/wss_img/wass_gif2.gif" alt="">
 
-            <div class="tags_box">
-                <div class="txt_tags">Tags</div>
-                <div class="tags_list">
-                    <div @click="toggleTag('survey')" :class="{ tag_active: isActive('survey') }" class="tag1">
-                        <div>Survey 2023</div>
-                    </div>
-                    <!-- 2 -->
-                    <div @click="toggleTag('data1')" :class="{ tag_active: isActive('data1') }" class="tag1">
-                        <div>Local Database 1</div>
-                    </div>
-                    <!-- 3 -->
-                    <div @click="toggleTag('data2')" :class="{ tag_active: isActive('data2') }" class="tag1">
-                        <div>Local Database 2</div>
+        <!-- end -of mob-donate -->
+
+        <!-- donate-sect -->
+
+        <div class="donate_gif_div">
+            <img class="dnate_gif" src="/wss_img/wass_gif2.gif" alt="">
+        </div>
+        <div class="main_rect_2"></div>
+        <div class="gif2_txt_div">
+            <div class="gif2_main_txt">Let’s end poverty.
+                 For good.</div><br>
+            <div class="gif2_txt2">By supporting our work, you are helping women and their families access <br> opportunity and build financial security.</div>
+            <button class="btn_donate_gif">Donate</button>
+        </div>
+       <!-- footer -->
+
+       <!-- mob_footer -->
+       <div class="mob_footer_div">
+        <div class="mob_sect1">
+            <div class="mob_txt1">Get in touch</div>
+            <div class="mob_txt2">Wayanad Social Service Society (WSSS) is a registered 
+                charitable society and a secular voluntary organization 
+                established in the year 1974. It is the official social 
+                service organization of the Catholic Diocese of 
+                Mananthavady.
+            </div>
+        </div>
+       
+        <div class="mob_sect2">
+            <div class="mob_txt_addrs">Address</div>
+            <div class="mob_txt_addrs_2">WSSS P.B.No.16, Mananthavady-670645, Wayanad,Kerala,India</div>
+        </div>
+
+        <div class="mob_lst_sect_div">
+            <div class="last_sect1">
+                <img class="mob_footer_img" src="/wss_img/Logo-white.png" alt="">
+                <div class="mob_txt_sect1_ftr">
+                    <div class="last_sect_txt2">Would you like to speak to us? We’re listening.</div>
+                    <div class="mob_contct_div">
+                        <div class="mob_cntct_btn">Contact us
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+  <path d="M9.9258 4.23836C9.89965 4.26448 9.8789 4.2955 9.86475 4.32964C9.85059 4.36378 9.84331 4.40038 9.84331 4.43734C9.84331 4.4743 9.85059 4.5109 9.86475 4.54505C9.8789 4.57919 9.89965 4.61021 9.9258 4.63633L14.5081 9.21859H2.81228C2.73769 9.21859 2.66615 9.24822 2.61341 9.30097C2.56066 9.35371 2.53103 9.42525 2.53103 9.49984C2.53103 9.57444 2.56066 9.64597 2.61341 9.69872C2.66615 9.75146 2.73769 9.78109 2.81228 9.78109H14.5081L9.9258 14.3634C9.89966 14.3895 9.87894 14.4205 9.86479 14.4547C9.85065 14.4888 9.84337 14.5254 9.84337 14.5623C9.84337 14.5993 9.85065 14.6359 9.86479 14.67C9.87894 14.7042 9.89966 14.7352 9.9258 14.7613C9.95193 14.7875 9.98295 14.8082 10.0171 14.8223C10.0512 14.8365 10.0878 14.8438 10.1248 14.8438C10.1617 14.8438 10.1983 14.8365 10.2325 14.8223C10.2666 14.8082 10.2976 14.7875 10.3238 14.7613L15.3863 9.69883C15.4124 9.67271 15.4332 9.64169 15.4473 9.60755C15.4615 9.5734 15.4688 9.5368 15.4688 9.49984C15.4688 9.46288 15.4615 9.42628 15.4473 9.39214C15.4332 9.358 15.4124 9.32698 15.3863 9.30086L10.3238 4.23836C10.2976 4.21221 10.2666 4.19146 10.2325 4.17731C10.1983 4.16316 10.1617 4.15587 10.1248 4.15587C10.0878 4.15587 10.0512 4.16316 10.0171 4.17731C9.98293 4.19146 9.95192 4.21221 9.9258 4.23836Z" fill="#FEFAE0"/>
+</svg>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="last_sect2">
+                <div class="mob_prvcy_plcy_div">
+                    <div class="mob_cpy_txt">Copyright 2023 WSSS LTD. All rights reserved.</div>
+                    <div class="mob_prvcy_txt">Privacy and policy  •  Terms and conditions</div>
+                </div>
+
+                <div class="mob_sc_media_div">
+                    <img class="mob_sc_media" src="/wss_img/ri_linkedin-fill.png" alt="">
+                    <img class="mob_sc_media" src="/wss_img/ic_baseline-facebook.png" alt="">
+                    <img class="mob_sc_media" src="/wss_img/mdi_instagram.png" alt="">
+                    <img class="mob_sc_media" src="/wss_img/pajamas_twitter.png" alt="">
+                </div>
+            </div>
         </div>
-        <!-- dwlnd-btn -->
+       </div>
 
-        <button @click="openSixthModal" class="update_btn_dwnld">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-  <path d="M3 15.8334H18V17.5H3V15.8334ZM11.3333 10.9764L16.3926 5.9171L17.5711 7.09562L10.5 14.1667L3.42893 7.09562L4.60744 5.9171L9.66667 10.9764V1.66669H11.3333V10.9764Z" fill="white"/>
-</svg> Download (72) Leads</button>
-<b-modal v-model="isSixthModalVisible" centered hide-footer   id="custom_popup">
-    <div class="leads_main2"></div>
-    <div class="success_popup">
-        <img class="success_img" src="/lead_finder/success.png" alt=""><br>
-        <div class="success_dtls">Download data successful, <br> Please check your email </div>
-        <router-link :to="{ name: 'home'}"><button class="bckto_crm_btn">Back to CRM</button></router-link> 
+
+         <!-- end -of mob-footer -->
+
+       <!--  -->
+
+       <div class="footer_div">
+        <div class="footer_sect1_div">
+            <div class="inner_div1">
+                <div class="txt_gt_tch">Get in touch</div>
+                <div class="inner_txt2">Wayanad Social Service Society (WSSS) is a registered charitable society and a 
+                    secular voluntary organization established in the year 1974. It is the official social
+                     service organization of the Catholic Diocese of Mananthavady.
+                </div>
+            </div>
+            <div class="inner_div2">
+                <div class="txt_adrss">Address</div>
+                <div class="inner_txt4">WSSS P.B.No.16,<br> Mananthavady-670645,<br> Wayanad,Kerala,India</div>
+            </div>
+        </div>
+        <div class="footer_sect2_div">
+            <div class="inner_ftr2">
+                <div><img class="footer_img" src="/wss_img/Logo-white.png" alt=""></div>
+                <div class="ftr2_txt_dtls">
+                    <div class="txt_ftr">Would you like to speak <br> to us? We’re listening.</div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="inner_ftr4">
+                <div class="fter_txt">
+                    <div class="txt_prvcy_plcy">Privacy and policy  •  Terms and conditions</div>
+                    <div class="txt_prvcy_plcy2">Copyright 2023 WSSS LTD. All rights reserved.</div>
+                </div>
+                <div class="logo_footer">
+                    <img class="sc_media" src="/wss_img/ri_linkedin-fill.png" alt="">
+                    <img class="sc_media" src="/wss_img/ic_baseline-facebook.png" alt="">
+                    <img class="sc_media" src="/wss_img/mdi_instagram.png" alt="">
+                    <img class="sc_media" src="/wss_img/pajamas_twitter.png" alt="">
+                </div>
+            </div>
+        </div>
+       </div>
     </div>
-</b-modal>
-    </div>
-   
-      </b-modal>
-     
-    </div>
-
-  </div>
-</template>
-
-<script>
-import { BModal } from 'bootstrap-vue';
-
-export default {
-components: {
-BModal,
-},
-  data() {
-    return {
-    isFirstModalVisible: false,
-    isSecondModalVisible: false,
-    isThirdModalVisible: false,
-    isFourthModalVisible: false,
-    isFifthModalVisible: false,
-    isSixthModalVisible: false,
-    activeElement: 'category',
-    activeCall:'call',
-    activeTags: [],
-    showDateTimeDiv: false,
-    modalContent: '',
-      modalTitle: '',
-    };
-  },
-  methods: {
-openFirstModal() {
-    this.isFirstModalVisible = true;
-},
-openSecondModal() {
-    this.isSecondModalVisible = true;
-},
-openThirdModal() {
-    this.isThirdModalVisible = true;
-},
-openFourthModal() {
-    this.isFourthModalVisible = true;
-},
-openFifthModal() {
-    this.isFifthModalVisible = true;
-},
-openSixthModal() {
-    this.isSixthModalVisible = true;
-},
-toggleActive(element) {
-    if (this.activeElement === element) {
-    this.activeElement = null; 
-    } else {
-    this.activeElement = element;
-    }
-},
-
-ActiveCall(element) {
-    if (this.activeCall === element) {
-    this.activeCall = null; 
-    } else {
-    this.activeCall = element;
-    }
-},
-toggleTag(tag) {
-    if (this.isActive(tag)) {
-    this.activeTags = this.activeTags.filter((t) => t !== tag);
-    } else {
-    this.activeTags.push(tag);
-    }
-},
-isActive(tag) {
-    return this.activeTags.includes(tag);
-},
-toggleDateTimeDiv() {
-    this.showDateTimeDiv = !this.showDateTimeDiv;
-},
-openModal(content) {
-  this.modalContent = content;
-  if (content === 'leadDetails') {
-    this.modalTitle = 'Lead Details';
-  } else if (content === 'addNote') {
-    this.modalTitle = 'Note';
-  } else if (content === 'logActivity') {
-    this.modalTitle = 'Log Activity';
-  }
-  this.isFirstModalVisible = true;
-}
-},
-};
-</script>
-
-
-<style>
-@import './style/homestyle.css';
-</style>
-
+  </template>
+  
+  <script>
+  export default {
+      data() {
+        return {
+            hideScrollbar: true,
+            menuItems: [
+        "Home",
+        "Projects",
+        "About us",
+        "Awards & Recognitions",
+        "Gallery",
+        "Activities",
+        "Contact",
+      ],
+      hoveredItem: null,
+           
+        }
+      },
+    methods: {
+       
+    },
+  };
+  </script>
+  
+  
+  <style>
+  @import './style/homestyle.css';
+  </style>
+  
+  

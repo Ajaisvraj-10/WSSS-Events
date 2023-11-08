@@ -26,68 +26,27 @@ const routes = [
      
           {
             path: "",
-            component: () => import("./views/app/pages/loading"),
+            component: () => import("./views/app/pages/home"),
           },
          
-          
           {
             path: "home",
             component: () => import("./views/app/pages/home"),
             name:'home'
           },
+   
           {
-            path: "filter",
-            component: () => import("./views/app/pages/filter"),
-            name:'filter'
+            path: "awards",
+            component: () => import("./views/app/pages/awards"),
+            name:'awards'
           },
+
           {
-            path: "downloadleads",
-            component: () => import("./views/app/pages/downloadleads"),
-            name:'downloadleads'
-          },
-          {
-            path: "success",
-            component: () => import("./views/app/pages/success"),
-            name:'success'
-          },
-          {
-            path: "leaddetails",
-            component: () => import("./views/app/pages/leaddetails"),
-            name:'leaddetails'
-          },
-          {
-            path: "addnote",
-            component: () => import("./views/app/pages/addnote"),
-            name:'addnote'
-          },
-          {
-            path: "logactivity",
-            component: () => import("./views/app/pages/logactivity"),
-            name:'logactivity'
-          },
-          {
-            path: "account",
-            component: () => import("./views/app/pages/account"),
-            name:'account'
-          },
-          {
-            path: "failed",
-            component: () => import("./views/app/pages/failed"),
-            name:'failed'
-          },
-          // {
-          //   path: "loading",
-          //   component: () => import("./views/app/pages/loading"),
-          //   name:'loading'
-          // },
-          
-          {
-            path: "sign-in",
-            component: () => import("./views/app/pages/sign-in"),
+            path: "project",
+            component: () => import("./views/app/pages/project"),
+            name:'project'
           },
          
-          
-          
         ]
       },
     
