@@ -19,14 +19,17 @@
         <!-- end of mob_menu -->
         <div class="top_nav_bar">
             <div class="nav_menu_div">
-                <div class="nav_home"
-                v-for="(name, index) in menuItems"
-                :key="index"
-                @mouseover="hoveredItem = index"
-                @mouseout="hoveredItem = null"
-                >{{ name }}
-                <div class="underline" :class="{ active: hoveredItem === index }"></div>
-            </div>
+                <router-link
+    v-for="(name, index) in menuItems"
+    :key="index"
+    :to="{ name: name.toLowerCase().replace(/\s+/g, '-') }"
+    class="nav_home"
+    @mouseover="hoveredItem = index"
+    @mouseout="hoveredItem = null"
+    >
+    {{ name }}
+    <div class="underline" :class="{ active: hoveredItem === index }"></div>
+    </router-link>
             </div>
             <button class="btn_donate">Donate</button>
         </div>
@@ -175,7 +178,6 @@
             </div>
         </div>
         <!-- footer -->
-         <!-- footer -->
 
        <!-- mob_footer -->
        <div class="mob_footer_div">
@@ -277,12 +279,12 @@ export default {
           hideScrollbar: true,
           menuItems: [
       "Home",
-      "Projects",
+      "Project",
       "About us",
-      "Awards & Recognitions",
+      "Awards",
       "Gallery",
       "Activities",
-      "Contact",
+      "Empty",
     ],
     hoveredItem: null,
          
