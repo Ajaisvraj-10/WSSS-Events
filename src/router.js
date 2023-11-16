@@ -58,6 +58,16 @@ const routes = [
             component: () => import("./views/app/pages/sidebar"),
             name:'sidebar'
           },
+          {
+            path: "eventsDetails",
+            component: () => import("./views/app/pages/eventsDetails"),
+            name:'events_details'
+          },
+          {
+            path: "projectsDetails",
+            component: () => import("./views/app/pages/projectsDetails"),
+            name:'projects_details'
+          },
          
         ]
       },

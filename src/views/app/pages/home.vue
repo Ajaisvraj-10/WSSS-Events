@@ -44,9 +44,9 @@
         </div>
         <!--  -->
         <!-- banner_txts -->
-        <div class="banner_txt_div">
-            <div class="txt_1">WSSS is forming 200 joint <br> lability groups (JLGS)</div>
-            <div  class="txt_2">Wayanad Social Service Society (WSSS) is a registered charitable society Registered under Charitable Societies <br> Registration Act of 1860 and a secular voluntary organization established in the year 1974. It is the official social <br> work organization of the Catholic Diocese of Mananthavady.</div>
+        <div class="banner_txt_div"  v-for="(banner, index) in bannerList" :key="index">
+            <div class="txt_1">{{ banner.title }}</div>
+            <div  class="txt_2">{{ banner.description }}</div>
 
             <div class="mute_knwmre_div">
                 <div class="mute_div">
@@ -89,9 +89,10 @@
                 <div class="txt_projects">Projects</div>
                 <img  src="/wss_img/Glow.png" alt="">
                 </div>
-                <div class="txt_view_more">View More</div>
+                <router-link :to="{ name: 'projects_details'}"><div class="txt_view_more">View More</div></router-link>
                 
             </div>
+            <router-link :to="{ name: 'project'}">
             <div class="projct_pstr_div">
                 <div class="poster_div" v-for="(project, index) in projectList" :key="index">
                     <img :src="project.photo" alt="Project Photo">
@@ -101,6 +102,7 @@
                     </div>
                 </div>
             </div>
+        </router-link>
             <!-- mob-version-poster -->
             <div class="projct_pstr_div_mob">
                 <div class="poster_div">
@@ -133,9 +135,9 @@
         <div class="update_div">
             <div class="updte_txt_div">
                 <div class="txt_updates_evnts">Updates & Events</div>
-                <div class="txt_view_more">View More</div>
+                <router-link :to="{ name: 'events_details'}"><div class="txt_view_more">View More</div></router-link>
             </div>
-          
+            <router-link :to="{ name: 'empty'}">
             <div class="update_pstr_div">
                 <div class="updt_pstr" v-for="(event, index) in eventList" :key="index">
                     <div class="updt_pstr_dtls">
@@ -166,6 +168,7 @@
                 </div> -->
                 <!--  -->
             </div>
+            </router-link>
         </div>
                 <!-- mob-mission -->
                 <div class="vision_mob_div">

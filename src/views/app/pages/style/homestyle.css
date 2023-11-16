@@ -326,6 +326,7 @@ font-size: 60px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+width: 670px;
 }
 }
 @media screen and (max-width: 767px) {
@@ -350,6 +351,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 170%; 
 letter-spacing: 0.3px;
+width: 810px;
 }
 }
 @media screen and (max-width: 767px) {
@@ -805,8 +807,11 @@ font-family: Belgiano Serif;
 font-size: 32px;
 font-style: normal;
 font-weight: 400;
-line-height: 170%; /* 54.4px */
+line-height: 170%; 
 text-decoration-line: underline;
+width: fit-content;
+height: fit-content;
+cursor: pointer;
 }
 
 
@@ -842,6 +847,10 @@ gap: 0px;
 overflow-x: auto;
 white-space: nowrap;
 }
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
 }
 @media screen and (max-width: 767px) {
 .projct_pstr_div{
@@ -980,17 +989,16 @@ gap: 8px;
 
 @media screen and (min-width: 768px) {
 .pstr_txt{
-    color: #1E1E1E;
-    font-family: Belgiano Serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 35px;
-    letter-spacing: 0.3px;
-    width: 230px;
-    overflow: hidden;
-    height: 40px;
-
+color: #1E1E1E;
+font-family: Belgiano Serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 35px;
+letter-spacing: 0.3px;
+width: 230px;
+overflow: hidden;
+height: 40px;
 }
 }
 @media screen and (max-width: 767px) {
@@ -1103,6 +1111,9 @@ margin-left: 50px;
 display: inline-flex;
 align-items: flex-start;
 gap: 20px;
+overflow-x: scroll;
+width: 100%;
+white-space: nowrap;
 }
 }
 
@@ -1201,6 +1212,8 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 170%; 
+overflow: hidden;
+width: 100%;
 }
 }
 /* mision-vision */
