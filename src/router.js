@@ -42,13 +42,13 @@ const routes = [
           },
 
           {
-            path: "project",
+            path: "/project/:id",
             component: () => import("./views/app/pages/project"),
             name:'project'
           },
 
           {
-            path: "empty",
+            path: "/empty/:id",
             component: () => import("./views/app/pages/empty"),
             name:'empty'
           },

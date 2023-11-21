@@ -114,8 +114,8 @@ display: inline-flex;
 align-items: center;
 gap: 35px;
 position: absolute;
-top: 20px;
-left: 425px;
+top: 30px;
+left: 700px;
 }
 }
 @media (max-width: 767px) {
@@ -136,7 +136,7 @@ display: none;
 .nav_menu_div{
 display: flex;
 align-items: flex-start;
-gap: 40px;
+gap: 55px;
 }
 }
 @media (max-width: 767px) {
@@ -155,7 +155,7 @@ align-items: center;
 gap: 8px;
 color: #000000;
 font-family: Belgiano Serif;
-font-size: 18px;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: 170%;
@@ -209,7 +209,7 @@ background: #283618;
 
 color: #FFF;
 font-family: Belgiano Serif;
-font-size: 20px;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: 170%; 
@@ -288,11 +288,11 @@ width: 100%;
 .emty_txt_1{
 color: #283618;
 font-family: Belgiano Serif;
-font-size: 70px;
+font-size: 55px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-width: 100%;
+width: fit-content;
 }
 }
 @media (max-width: 767px) {
@@ -312,10 +312,11 @@ width: 100%;
 .emty_txt_2{
 color: #343434;
 font-family: Belgiano Serif;
-font-size: 25px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+width: 850px;
 }
 }
 @media (max-width: 767px) {

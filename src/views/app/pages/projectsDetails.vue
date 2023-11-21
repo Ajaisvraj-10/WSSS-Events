@@ -1,7 +1,10 @@
 <template>
     <div class="project_dtls_main">
-        <div class="projct_pstr_div">
-                <div class="poster_div" v-for="(project, index) in projectList" :key="index">
+        <div class="title_prjcts">Projects</div>
+        <div class="projct_contnr">
+        <router-link v-for="project in projectList"  :to="{ name: 'project', params: { id: project.id }}">
+            <div class="projct_pstr_div">
+            <div class="poster_div">
                     <img :src="project.photo" alt="Project Photo">
                     <div class="postr_dtls">
                         <div class="pstr_txt">{{ project.title }}</div>
@@ -9,6 +12,8 @@
                     </div>
                 </div>
             </div>
+        </router-link>
+    </div>
     </div>
 </template>
 

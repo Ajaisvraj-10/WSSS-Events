@@ -1,7 +1,9 @@
 <template>
     <div class="awards_main">
-        <img class="gif_image" src="/wss_img/wsss_gif.gif" alt="gif">
-        <img class="gif_image_mob" src="/wss_img/mob_img.png" alt="">
+        <div v-for="(banner, index) in bannerList">
+        <img class="gif_image" :src="banner.banner_image" alt="Story Photo">
+    </div>
+    <img class="gif_image_mob" src="/wss_img/mob_img.png" alt="">
         <div class="main_rect"></div>
         <div class="top_logo_box">
             <div class="inner_logo">
@@ -35,9 +37,9 @@
         </div>
         <!--  -->
         <!-- banner_txts -->
-        <div class="banner_txt_div">
-            <div class="txt_1">WSSS is forming 200 joint <br> lability groups (JLGS)</div>
-            <div  class="txt_2">Wayanad Social Service Society (WSSS) is a registered charitable society Registered under Charitable Societies <br> Registration Act of 1860 and a secular voluntary organization established in the year 1974. It is the official social <br> work organization of the Catholic Diocese of Mananthavady.</div>
+        <div class="banner_txt_div"  v-for="(banner, index) in bannerList">
+            <div class="txt_1">{{ banner.title }}</div>
+            <div  class="txt_2">{{ banner.description }}</div>
 
             <div class="mute_knwmre_div">
                 <div class="mute_div">
@@ -251,7 +253,13 @@
                 <div><img class="footer_img" src="/wss_img/Logo-white.png" alt=""></div>
                 <div class="ftr2_txt_dtls">
                     <div class="txt_ftr">Would you like to speak <br> to us? We’re listening.</div>
-                    <div></div>
+                    <div class="contct_div">
+                        <div class="cntct_btn">Contact us
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+  <path d="M9.9258 4.23836C9.89965 4.26448 9.8789 4.2955 9.86475 4.32964C9.85059 4.36378 9.84331 4.40038 9.84331 4.43734C9.84331 4.4743 9.85059 4.5109 9.86475 4.54505C9.8789 4.57919 9.89965 4.61021 9.9258 4.63633L14.5081 9.21859H2.81228C2.73769 9.21859 2.66615 9.24822 2.61341 9.30097C2.56066 9.35371 2.53103 9.42525 2.53103 9.49984C2.53103 9.57444 2.56066 9.64597 2.61341 9.69872C2.66615 9.75146 2.73769 9.78109 2.81228 9.78109H14.5081L9.9258 14.3634C9.89966 14.3895 9.87894 14.4205 9.86479 14.4547C9.85065 14.4888 9.84337 14.5254 9.84337 14.5623C9.84337 14.5993 9.85065 14.6359 9.86479 14.67C9.87894 14.7042 9.89966 14.7352 9.9258 14.7613C9.95193 14.7875 9.98295 14.8082 10.0171 14.8223C10.0512 14.8365 10.0878 14.8438 10.1248 14.8438C10.1617 14.8438 10.1983 14.8365 10.2325 14.8223C10.2666 14.8082 10.2976 14.7875 10.3238 14.7613L15.3863 9.69883C15.4124 9.67271 15.4332 9.64169 15.4473 9.60755C15.4615 9.5734 15.4688 9.5368 15.4688 9.49984C15.4688 9.46288 15.4615 9.42628 15.4473 9.39214C15.4332 9.358 15.4124 9.32698 15.3863 9.30086L10.3238 4.23836C10.2976 4.21221 10.2666 4.19146 10.2325 4.17731C10.1983 4.16316 10.1617 4.15587 10.1248 4.15587C10.0878 4.15587 10.0512 4.16316 10.0171 4.17731C9.98293 4.19146 9.95192 4.21221 9.9258 4.23836Z" fill="#FEFAE0"/>
+</svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -273,10 +281,16 @@
 </template>
 
 <script>
+import axios from 'axios';
+import sidebar from './sidebar.vue';
 export default {
+  components: {
+  sidebar,
+},
     data() {
       return {
           hideScrollbar: true,
+          show_sidebar: false,
           menuItems: [
       "Home",
       "Project",
@@ -287,12 +301,54 @@ export default {
       "Empty",
     ],
     hoveredItem: null,
+    storyList : [],
+    projectList : [],
+    eventList : [],
+    bannerList : [],
+
          
       }
     },
-  methods: {
-     
+    mounted(){
+      this.fetchStory();
+      this.fetchProjects();
+      this.fetchEvents();
+      this.fetchBanners();
+    },
+    methods: {
+      async fetchStory() {
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/adminstory/');
+        this.storyList = response.data;
+      } catch (error) {
+        console.error('Error fetching story data:', error);
+      }
+    },
+    async fetchProjects() {
+  try {
+      const response = await axios.get('http://127.0.0.1:8000/api/adminproject/');
+      this.projectList = response.data;
+  } catch (error) {
+      console.error('Error fetching project data:', error);
+  }
   },
+  async fetchEvents() {
+  try {
+      const response = await axios.get('http://127.0.0.1:8000/api/adminevent/');
+      this.eventList = response.data;
+  } catch (error) {
+      console.error('Error fetching event data:', error);
+  }
+  },
+  async fetchBanners() {
+  try {
+      const response = await axios.get('http://127.0.0.1:8000/api/adminbanner/');
+      this.bannerList = response.data;
+  } catch (error) {
+      console.error('Error fetching event data:', error);
+  }
+  },
+},
 };
 </script>
 

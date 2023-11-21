@@ -50,7 +50,7 @@ height: auto;
 @media screen and (min-width: 768px) {
 .play_btn_banr{
 position: absolute;
-bottom: 255px;
+bottom: 460px;
 left: 50%;
 transform: translate(-50%, -50%);
 }
@@ -136,8 +136,8 @@ display: inline-flex;
 align-items: center;
 gap: 35px;
 position: absolute;
-top: 20px;
-left: 425px;
+top: 30px;
+left: 700px;
 }
 }
 @media screen and (max-width: 767px) {
@@ -158,7 +158,7 @@ display: none;
 .nav_menu_div{
 display: flex;
 align-items: flex-start;
-gap: 40px;
+gap: 55px;
 }
 }
 @media screen and (max-width: 767px) {
@@ -177,7 +177,7 @@ align-items: center;
 gap: 8px;
 color: #000000;
 font-family: Belgiano Serif;
-font-size: 18px;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: 170%;
@@ -231,7 +231,7 @@ background: #283618;
 
 color: #FFF;
 font-family: Belgiano Serif;
-font-size: 20px;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: 170%; 

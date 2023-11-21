@@ -1,8 +1,10 @@
 <template>
     <div class="event_dtls_main">
+      <div class="title_prjcts">Events</div>
         <div class="update_div">
+          <router-link v-for="event in eventList" :to="{ name: 'empty', params: { id: event.id }}"> 
             <div class="update_pstr_div">
-                <div class="updt_pstr" v-for="(event, index) in eventList" :key="index">
+                <div class="updt_pstr">
                     <div class="updt_pstr_dtls">
                         <img :src="event.photo" alt="Event Photo">
                         <div class="updt_txt1">{{ event.title }}</div>
@@ -15,6 +17,7 @@
                     </div>
                 </div>
             </div>
+          </router-link>
         </div>
     </div>
 </template>

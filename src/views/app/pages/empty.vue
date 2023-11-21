@@ -44,26 +44,20 @@
     </div>
 
     <div class="page_head_div">
-        <div class="emty_txt_1">Page headline</div>
-        <div class="emty_txt_2">An Undertaking of the Catholic Diocese of Mananthavady.</div>
+        <div class="emty_txt_1">{{event.title}}</div>
+        <div class="emty_txt_2">{{ event.description }}</div>
         <button class="infm_btn">For more information contact us ></button>
     </div>
     <div class="line_2"></div>
     <!--  -->
 
     <div class="empty_dtls_txt">
-        <div class="txt_1empty">WSSS is forming 200 joint lability groups (JLGS)</div>
-    <div class="awrd_txt2">The Wayanad Service Society (WSSS), the official social work wing of the Mananthavady Diocese, has been accorded special consultative status with 
-                        the United Nations Economic and Social Council (ECOSOC).The recognition was a testimony to the dedicated efforts that the organization has been 
-                        making since its inception in 1974.This consultative status will enable the organization to actively engage with ECOSOC and its subsidiary bodies, UN 
-                        secretariat, programmes, projects and funds in a number of ways. Wayanad Social Service Society started the process of interaction and procedures 
-                        of project application with UN since 2015. It is a great achievement that the organization gained this successful international development platform 
-                        which will definitely make conducive atmosphere with the Sustainable Development Goals (SDG 2030).
-                        </div>   
+        <div class="txt_1empty"></div>
+    <div class="awrd_txt2"></div>   
                     
     </div>
 
-        <!-- footer -->
+    <!-- footer -->
 
      <!-- mob_footer -->
      <div class="mob_footer_div">
@@ -135,7 +129,13 @@
                 <div><img class="footer_img" src="/wss_img/Logo-white.png" alt=""></div>
                 <div class="ftr2_txt_dtls">
                     <div class="txt_ftr">Would you like to speak <br> to us? We’re listening.</div>
-                    <div></div>
+                    <div class="contct_div">
+                        <div class="cntct_btn">Contact us
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+  <path d="M9.9258 4.23836C9.89965 4.26448 9.8789 4.2955 9.86475 4.32964C9.85059 4.36378 9.84331 4.40038 9.84331 4.43734C9.84331 4.4743 9.85059 4.5109 9.86475 4.54505C9.8789 4.57919 9.89965 4.61021 9.9258 4.63633L14.5081 9.21859H2.81228C2.73769 9.21859 2.66615 9.24822 2.61341 9.30097C2.56066 9.35371 2.53103 9.42525 2.53103 9.49984C2.53103 9.57444 2.56066 9.64597 2.61341 9.69872C2.66615 9.75146 2.73769 9.78109 2.81228 9.78109H14.5081L9.9258 14.3634C9.89966 14.3895 9.87894 14.4205 9.86479 14.4547C9.85065 14.4888 9.84337 14.5254 9.84337 14.5623C9.84337 14.5993 9.85065 14.6359 9.86479 14.67C9.87894 14.7042 9.89966 14.7352 9.9258 14.7613C9.95193 14.7875 9.98295 14.8082 10.0171 14.8223C10.0512 14.8365 10.0878 14.8438 10.1248 14.8438C10.1617 14.8438 10.1983 14.8365 10.2325 14.8223C10.2666 14.8082 10.2976 14.7875 10.3238 14.7613L15.3863 9.69883C15.4124 9.67271 15.4332 9.64169 15.4473 9.60755C15.4615 9.5734 15.4688 9.5368 15.4688 9.49984C15.4688 9.46288 15.4615 9.42628 15.4473 9.39214C15.4332 9.358 15.4124 9.32698 15.3863 9.30086L10.3238 4.23836C10.2976 4.21221 10.2666 4.19146 10.2325 4.17731C10.1983 4.16316 10.1617 4.15587 10.1248 4.15587C10.0878 4.15587 10.0512 4.16316 10.0171 4.17731C9.98293 4.19146 9.95192 4.21221 9.9258 4.23836Z" fill="#FEFAE0"/>
+</svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -158,11 +158,19 @@
 
 
 <script>
+import axios from 'axios';
+import sidebar from './sidebar.vue';
 export default {
+  components: {
+  sidebar,
+},
     data() {
       return {
           hideScrollbar: true,
+          show_sidebar: false,
+          event: {},
           menuItems: [
+            
       "Home",
       "Project",
       "About us",
@@ -172,12 +180,23 @@ export default {
       "Empty",
     ],
     hoveredItem: null,
-         
       }
     },
-  methods: {
-     
+    mounted() {
+    this.fetchEventDetails();
   },
+
+    methods: {
+        async fetchEventDetails() {
+      try {
+        const eventId = this.$route.params.id;
+        const response = await axios.get(`http://127.0.0.1:8000/api/adminevent/${eventId}/`);
+        this.event = response.data;
+      } catch (error) {
+        console.error('Error fetching event details:', error);
+      }
+    },
+},
 };
 </script>
 

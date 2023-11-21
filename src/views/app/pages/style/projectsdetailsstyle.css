@@ -3,6 +3,16 @@ height: 100vh;
 width: 100%;
 background: #FEFAE0;
 }
+
+.title_prjcts{
+color: #283618;
+font-family: Belgiano Serif;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+}
 .projct_pstr_div{
 display: flex;
 width: 100%;
@@ -14,7 +24,12 @@ justify-content: space-between;
 margin-top: 30px;
 padding-bottom: 30px;
 }
-
+.projct_contnr{
+    display: flex;
+    white-space: nowrap;
+flex-wrap: wrap;
+justify-content: space-between;
+}
 .poster_div{
 display: flex;
 padding: 18px;
