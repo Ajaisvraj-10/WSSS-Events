@@ -32,7 +32,7 @@
         </div>
         <!--  -->
     </div>
-    <div><img class="prjct_banner" src="/wss_img/empty_banner_wsss.png" alt=""></div>
+    <div><img class="prjct_banner" :src="event.photo" alt="Event Photo"></div>
     <div class="cut_div">
         <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="290" viewBox="0 0 1313 297" fill="none">
   <path d="M0 0H1007.48L1313 196V297H0V0Z" fill="#FEFAE0"/>
@@ -52,8 +52,14 @@
     <!--  -->
 
     <div class="empty_dtls_txt">
-        <div class="txt_1empty"></div>
-    <div class="awrd_txt2"></div>   
+        <div class="prjct_txt2">
+        The Wayanad Service Society (WSSS), the official social work wing of the Mananthavady Diocese, has been accorded special consultative status with the United 
+        Nations Economic and Social Council (ECOSOC).The recognition was a testimony to the dedicated efforts that the organization has been making since its 
+        inception in 1974.This consultative status will enable the organization to actively engage with ECOSOC and its subsidiary bodies, UN secretariat, 
+        programmes, projects and funds in a number of ways. Wayanad Social Service Society started the process of interaction and procedures of project application with UN since
+        2015. It is a great achievement that the organization gained this successful international development platform which will definitely make conducive atmosphere
+        with the Sustainable Development Goals (SDG 2030).
+      </div>
                     
     </div>
 
@@ -190,7 +196,7 @@ export default {
         async fetchEventDetails() {
       try {
         const eventId = this.$route.params.id;
-        const response = await axios.get(`http://127.0.0.1:8000/api/adminevent/${eventId}/`);
+        const response = await axios.get(` http://api.wsss.capcee.com/api/adminevent/${eventId}/`);
         this.event = response.data;
       } catch (error) {
         console.error('Error fetching event details:', error);

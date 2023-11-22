@@ -32,7 +32,7 @@
         </div>
         <!--  -->
     </div>
-    <div><img class="prjct_banner" src="/wss_img/project_banner_wsss.png" alt=""></div>
+    <div><img class="prjct_banner" :src="project.photo" alt="Project Photo"></div>
     <div><img class="play_btn_banr" src="/wss_img/octicon_play- x2.png" alt=""></div>
     <!--  -->
     <div class="prjct_txt_div">
@@ -181,7 +181,7 @@ export default {
         async fetchProjectDetails() {
       try {
         const projectId = this.$route.params.id;
-        const response = await axios.get(`http://127.0.0.1:8000/api/adminproject/${projectId}/`);
+        const response = await axios.get(`http://api.wsss.capcee.com/api/adminproject/${projectId}/`);
         this.project = response.data;
       } catch (error) {
         console.error('Error fetching project details:', error);

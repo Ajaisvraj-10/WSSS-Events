@@ -115,7 +115,7 @@ align-items: center;
 gap: 35px;
 position: absolute;
 top: 30px;
-left: 700px;
+left: 560px;
 }
 }
 @media (max-width: 767px) {
@@ -136,7 +136,7 @@ display: none;
 .nav_menu_div{
 display: flex;
 align-items: flex-start;
-gap: 55px;
+gap: 35px;
 }
 }
 @media (max-width: 767px) {
@@ -155,7 +155,7 @@ align-items: center;
 gap: 8px;
 color: #000000;
 font-family: Belgiano Serif;
-font-size: 24px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 170%;
@@ -209,7 +209,7 @@ background: #283618;
 
 color: #FFF;
 font-family: Belgiano Serif;
-font-size: 24px;
+font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 170%; 

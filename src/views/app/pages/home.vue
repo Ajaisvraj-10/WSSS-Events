@@ -407,7 +407,7 @@
       methods: {
         async fetchStory() {
         try {
-          const response = await axios.get('http://127.0.0.1:8000/api/adminstory/');
+          const response = await axios.get('http://api.wsss.capcee.com/api/adminstory/');
           this.storyList = response.data;
         } catch (error) {
           console.error('Error fetching story data:', error);
@@ -415,7 +415,7 @@
       },
       async fetchProjects() {
     try {
-        const response = await axios.get('http://127.0.0.1:8000/api/adminproject/');
+        const response = await axios.get('http://api.wsss.capcee.com/api/adminproject/');
         this.projectList = response.data;
     } catch (error) {
         console.error('Error fetching project data:', error);
@@ -423,7 +423,7 @@
     },
     async fetchEvents() {
     try {
-        const response = await axios.get('http://127.0.0.1:8000/api/adminevent/');
+        const response = await axios.get('http://api.wsss.capcee.com/api/adminevent/');
         this.eventList = response.data;
     } catch (error) {
         console.error('Error fetching event data:', error);
@@ -431,7 +431,7 @@
     },
     async fetchBanners() {
     try {
-        const response = await axios.get('http://127.0.0.1:8000/api/adminbanner/');
+        const response = await axios.get('http://api.wsss.capcee.com/api/adminbanner/');
         this.bannerList = response.data;
     } catch (error) {
         console.error('Error fetching event data:', error);
