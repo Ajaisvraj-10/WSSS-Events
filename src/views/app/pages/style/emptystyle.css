@@ -2,7 +2,7 @@
 .empty_main{
 width: 100%;
 height: 100vh;
-background-color: #FFF;
+background-color: #FEFAE0;
 }
 }
 @media (max-width: 767px) {
@@ -10,6 +10,10 @@ background-color: #FFF;
 width: 100%;
 height: 100vh;
 }
+}
+body{
+    background-color: #FEFAE0;
+
 }
 
 
@@ -46,7 +50,7 @@ height: auto;
 
 
 @media (min-width: 768px) {
-.top_logo_box{
+.top_logo_box_evnts{
 display: flex;
 width: 110px;
 padding: 40px 12px 9px 12px;
@@ -61,7 +65,7 @@ left: 70px;
 }
 }
 @media (max-width: 767px) {
-.top_logo_box{
+.top_logo_box_evnts{
 display: flex;
 width: 85px;
 padding: 32px 13px 6px 13px;
@@ -133,14 +137,14 @@ display: none;
 
 
 @media (min-width: 768px) {
-.nav_menu_div{
+.nav_menu_div_evnts{
 display: flex;
 align-items: flex-start;
 gap: 35px;
 }
 }
 @media (max-width: 767px) {
-.nav_menu_div{
+.nav_menu_div_evnts{
 display: flex;
 align-items: flex-start;
 gap: 40px;
@@ -148,7 +152,7 @@ gap: 40px;
 }
 
 @media (min-width: 768px) {
-.nav_home {
+.nav_home_evnts {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -164,7 +168,7 @@ position: relative;
 text-decoration: none;
 }
 
-.nav_home::before {
+.nav_home_evnts::before {
 content: "";
 position: absolute;
 bottom: 0;
@@ -175,14 +179,14 @@ background-color: #000000;
 transition: width 0.5s; 
 }
 
-.nav_home:hover::before {
+.nav_home_evnts:hover::before {
 width: 100%;
 }
 }
 
 
 @media (max-width: 767px) {
-.nav_home{
+.nav_home_evnts{
 display: flex;
 justify-content: center;
 align-items: center;
@@ -199,7 +203,7 @@ line-height: 170%;
 
 
 @media (min-width: 768px) {
-.btn_donate{
+.btn_donate_evnts{
 display: inline-flex;
 padding: 2px 20px;
 justify-content: center;
@@ -218,7 +222,7 @@ cursor: pointer;
 }
 }
 @media (max-width: 767px) {
-.btn_donate{
+.btn_donate_evnts{
 display: flex;
 padding: 2px 20px;
 justify-content: center;
@@ -266,7 +270,7 @@ display: inline-flex;
 flex-direction: column;
 align-items: flex-start;
 position: absolute;
-top: 580px;
+top: 608px;
 left: 60px;
 }
 }
@@ -401,6 +405,12 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 50px;
 margin-bottom: 50px;
+background: #FEFAE0;
+color: #1E1E1E;
+font-family: IBM Plex Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
 }
 }
 @media (max-width: 767px) {

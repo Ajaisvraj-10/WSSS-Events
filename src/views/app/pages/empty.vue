@@ -1,7 +1,7 @@
 <template>
     <div class="empty_main">
         <div class="top_nav_div">
-    <div class="top_logo_box">
+    <div class="top_logo_box_evnts">
             <div class="inner_logo">
                 <img class="logo_img" src="/wss_img/Logo-white.png" alt="">
             </div>
@@ -15,12 +15,12 @@
         <!-- end of mob_menu -->
         <!-- navbar -->
         <div class="top_nav_bar">
-            <div class="nav_menu_div">
+            <div class="nav_menu_div_evnts">
                 <router-link
     v-for="(name, index) in menuItems"
     :key="index"
     :to="{ name: name.toLowerCase().replace(/\s+/g, '-') }"
-    class="nav_home"
+    class="nav_home_evnts"
     @mouseover="hoveredItem = index"
     @mouseout="hoveredItem = null"
     >
@@ -28,7 +28,7 @@
     <div class="underline" :class="{ active: hoveredItem === index }"></div>
     </router-link>
             </div>
-            <button class="btn_donate">Donate</button>
+            <button class="btn_donate_evnts">Donate</button>
         </div>
         <!--  -->
     </div>
@@ -52,14 +52,7 @@
     <!--  -->
 
     <div class="empty_dtls_txt">
-        <div class="prjct_txt2">
-        The Wayanad Service Society (WSSS), the official social work wing of the Mananthavady Diocese, has been accorded special consultative status with the United 
-        Nations Economic and Social Council (ECOSOC).The recognition was a testimony to the dedicated efforts that the organization has been making since its 
-        inception in 1974.This consultative status will enable the organization to actively engage with ECOSOC and its subsidiary bodies, UN secretariat, 
-        programmes, projects and funds in a number of ways. Wayanad Social Service Society started the process of interaction and procedures of project application with UN since
-        2015. It is a great achievement that the organization gained this successful international development platform which will definitely make conducive atmosphere
-        with the Sustainable Development Goals (SDG 2030).
-      </div>
+        <div class="prjct_txt2">{{ event.long_description }}</div>
                     
     </div>
 
@@ -178,7 +171,7 @@ export default {
           menuItems: [
             
       "Home",
-      "Project",
+      "ProjectsDetails",
       "About us",
       "Awards",
       "Gallery",
@@ -196,7 +189,7 @@ export default {
         async fetchEventDetails() {
       try {
         const eventId = this.$route.params.id;
-        const response = await axios.get(` http://api.wsss.capcee.com/api/adminevent/${eventId}/`);
+        const response = await axios.get(`http://api.wsss.capcee.com/api/adminevent/${eventId}/`);
         this.event = response.data;
       } catch (error) {
         console.error('Error fetching event details:', error);

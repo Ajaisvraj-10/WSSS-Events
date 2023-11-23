@@ -66,7 +66,7 @@ const routes = [
           {
             path: "projectsDetails",
             component: () => import("./views/app/pages/projectsDetails"),
-            name:'projects_details'
+            name:'projectsdetails'
           },
          
         ]

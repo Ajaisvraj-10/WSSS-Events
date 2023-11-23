@@ -7,11 +7,14 @@
             </div>
         </div>
          <!-- mob_nav -->
-         <router-link :to="{ name: 'sidebar'}"> <div class="mob_nav_menu">
+         <div v-if="show_sidebar">
+        <sidebar/>
+       </div>
+       <div class="mob_nav_menu" @click="show_sidebar=!show_sidebar">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
   <path d="M3.5 4.66669H24.5V7.00002H3.5V4.66669ZM3.5 12.8334H24.5V15.1667H3.5V12.8334ZM3.5 21H24.5V23.3334H3.5V21Z" fill="#283618"/>
 </svg>
-        </div></router-link>
+        </div>
         <!-- end of mob_menu -->
         <!-- navbar -->
         <div class="top_nav_bar">
@@ -163,7 +166,7 @@ export default {
           project: {},
           menuItems: [
       "Home",
-      "Project",
+      "ProjectsDetails",
       "About us",
       "Awards",
       "Gallery",

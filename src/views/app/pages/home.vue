@@ -8,8 +8,8 @@
        
         <img class="gif_image_mob" src="/wss_img/mob_img.png" alt="">
         <div class="main_rect"></div>
-        <div class="top_logo_box">
-            <div class="inner_logo">
+        <div class="top_logo_box_home">
+            <div class="inner_logo_home">
                 <img class="logo_img" src="/wss_img/Logo-dark.png" alt="">
                 <!-- <div class="green_rect"></div> -->
             </div>
@@ -26,13 +26,13 @@
     </div>
    
         <!-- end of mob_menu -->
-        <div class="top_nav_bar">
-            <div class="nav_menu_div">
+        <div class="top_nav_bar_home">
+            <div class="nav_menu_div_home">
                 <router-link
     v-for="(name, index) in menuItems"
    
     :to="{ name: name.toLowerCase().replace(/\s+/g, '-') }"
-    class="nav_home"
+    class="nav_home_main"
     @mouseover="hoveredItem = index"
     @mouseout="hoveredItem = null"
     >
@@ -40,7 +40,7 @@
     <div class="underline" :class="{ active: hoveredItem === index }"></div>
     </router-link>
             </div>
-            <button class="btn_donate">Donate</button>
+            <button class="btn_donate_home">Donate</button>
         </div>
         <!--  -->
         <!-- banner_txts -->
@@ -89,7 +89,7 @@
                 <div class="txt_projects">Projects</div>
                 <img  src="/wss_img/Glow.png" alt="">
                 </div>
-                <router-link :to="{ name: 'projects_details'}"><div class="txt_view_more">View More</div></router-link>
+                <router-link :to="{ name: 'projectsdetails'}"><div class="txt_view_more">View More</div></router-link>
             </div>
 
             <div class="projct_contnr">
@@ -382,7 +382,7 @@
             show_sidebar: false,
             menuItems: [
         "Home",
-        "Project",
+        "ProjectsDetails",
         "About us",
         "Awards",
         "Gallery",

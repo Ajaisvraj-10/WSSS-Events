@@ -107,7 +107,7 @@ export default {
     bannerList : [],
     menuItems: [
     "Home",
-    "Project",
+    "ProjectsDetails",
     "About us",
     "Awards",
     "Gallery",
@@ -125,7 +125,7 @@ hoveredItem: null,
     methods: {
   async fetchEvents() {
   try {
-      const response = await axios.get(' http://api.wsss.capcee.com/api/adminevent/');
+      const response = await axios.get('http://api.wsss.capcee.com/api/adminevent/');
       this.eventList = response.data;
   } catch (error) {
       console.error('Error fetching event data:', error);

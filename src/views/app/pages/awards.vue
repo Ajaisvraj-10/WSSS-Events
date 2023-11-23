@@ -187,6 +187,50 @@
                 </div>
                 <!--  -->
             </div>
+            <!--  -->
+            <!-- mob-award-sect -->
+            <div class="award_dtls_sect_div_mob">
+                <div class="award_div1">
+                     <div><img class="award_div1_img" src="/wss_img/award_img.png" alt=""></div>
+                    <div class="img_award"><img src="/wss_img/award x1.png" alt=""></div>
+                    <div class="dtl_txt_div">
+                        <div class="awrd_txt_1">SPECIAL CONSULTATIVE STATUS FOR WSSS WITH THE UNITED NATIONS  ECONOMIC AND SOCIAL COUNCIL (ECOSOC)</div>
+                        <div class="awrd_txt2">The Wayanad Service Society (WSSS), the official social work wing of the Mananthavady Diocese, has been accorded special consultative status with 
+                            the United Nations Economic and Social Council (ECOSOC).The recognition was a testimony to the dedicated efforts that the organization has been 
+                            making since its inception in 1974.This consultative status will enable the organization to actively engage with ECOSOC and its subsidiary bodies, UN 
+                            secretariat, programmes, projects and funds in a number of ways. Wayanad Social Service Society started the process of interaction and procedures 
+                            of project application with UN since 2015. It is a great achievement that the organization gained this successful international development platform 
+                            which will definitely make conducive atmosphere with the Sustainable Development Goals (SDG 2030).
+                        </div>
+                    </div>
+                   
+
+                </div>
+                <!-- 2 -->
+                <div class="award_div1">
+                    <div><img class="award_div1_img" src="/wss_img/award_img.png" alt=""></div>
+                    <div class="img_award"><img src="/wss_img/award x1.png" alt=""></div>
+                    <div class="dtl_txt_div">
+                        <div class="awrd_txt_1">BEST PFA (NABARD WADI PROJCET)</div>
+                        <div class="awrd_txt2">Wayanad Social Service Society has been selected as the best Program Facilitating Agency in the State for NABARD Integrated Tribal Development Project (WADI). During the function held at Thiruvanathapuram, Rev.Fr. Jinoj Palathadathil (Associate Director, WSSS) and P.A.Jose (Program Officer, WSSS) were accepted Award from Sri.V.S.Anilkumar, Minister for Agriculture, Kerala State. NABARD is implementing the Integrated Tribal Development Project (WADI) in various districts of Kerala. The project is being implemented by various Program Facilitating Agencies (PFAs).
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="award_div1">
+                    <div><img class="award_div1_img" src="/wss_img/award_img.png" alt=""></div>
+                    <div class="img_award"><img src="/wss_img/award x1.png" alt=""></div>
+                    <div class="dtl_txt_div">
+                        <div class="awrd_txt_1">PARISTHITHI MITHRA</div>
+                        <div class="awrd_txt2">Paristhithi Mithra is an award instituted by the CEERD, St. Stephen’s College, Uzhavoor every year on June 5th Environment Day. The award is given in recognition of the outstanding contribution towards the promotion of environmental protection, conservation and preservation in the State of Kerala. On this special day Mr.P.A.Jose, Program Officer, WSSS received the Paristhithi Mitra Award from Sri. Mons Joseph MLA at St. Stephen College, Uzhavoor for raising the awareness level and encouraging positive actions for the environment, galvanizing individual actions into a collective power that generates an exponential positive impact. The award marks the importance of World Environment Day on 5 June and celebrates innovative and outstanding environmental programs and initiatives in and around Kerala, as well as the critical work of environmental leaders.
+                        </div>
+                    </div>
+                </div>
+    
+                <!--  -->
+            </div>
+            <!-- end-of-mob-award -->
         </div>
         <!-- footer -->
 
@@ -302,7 +346,7 @@ export default {
           show_sidebar: false,
           menuItems: [
       "Home",
-      "Project",
+      "ProjectsDetails",
       "About us",
       "Awards",
       "Gallery",
@@ -327,7 +371,7 @@ export default {
     methods: {
       async fetchStory() {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/adminstory/');
+        const response = await axios.get('http://api.wsss.capcee.com/api/adminstory/');
         this.storyList = response.data;
       } catch (error) {
         console.error('Error fetching story data:', error);
@@ -335,7 +379,7 @@ export default {
     },
     async fetchProjects() {
   try {
-      const response = await axios.get('http://127.0.0.1:8000/api/adminproject/');
+      const response = await axios.get('http://api.wsss.capcee.com/api/adminproject/');
       this.projectList = response.data;
   } catch (error) {
       console.error('Error fetching project data:', error);
@@ -343,7 +387,7 @@ export default {
   },
   async fetchEvents() {
   try {
-      const response = await axios.get('http://127.0.0.1:8000/api/adminevent/');
+      const response = await axios.get('http://api.wsss.capcee.com/api/adminevent/');
       this.eventList = response.data;
   } catch (error) {
       console.error('Error fetching event data:', error);
@@ -351,7 +395,7 @@ export default {
   },
   async fetchBanners() {
   try {
-      const response = await axios.get('http://127.0.0.1:8000/api/adminbanner/');
+      const response = await axios.get('http://api.wsss.capcee.com/api/adminbanner/');
       this.bannerList = response.data;
   } catch (error) {
       console.error('Error fetching event data:', error);
